@@ -31,12 +31,23 @@
     text-align: center;
     margin:20px;
 }
+.form{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 4%;
+    margin:5%;
+
+}
 .footer{
     background-color: black;
     color:white;
     display: flex;
     justify-content: space-evenly;
     padding:10px;
+    position: absolute;
+    top:90%;
+    width: 100vw;
+    height: 8vh;
 }
 
 
