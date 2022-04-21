@@ -3,14 +3,20 @@
 }
 .home-title{
     text-align: center;
+    padding-top: 75px;
+    color: rgb(36, 36, 36);
+    
+
 }
 .navbar{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    background-color: tan;
-    height: 11vh;
-    padding-top: 20px;
+    
+    background-color: rgb(107, 85, 57);
+  
+    height: 9vh;
+    padding: 8px;
 }
 .nav-item{
     text-decoration: none;
@@ -18,13 +24,26 @@
     align-items: center;
     justify-content: space-evenly;
     font-weight: bold;
-    color: black;
+    color: rgb(205, 205, 205);
     padding: 20px;
   
   }
+  .old-north-img{
+      height: 45vh;
+      width: 100vw;
+      
+      background-image: url('../images/oldnorthmain.jpg');
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      
+
+      
+  }
   .nav-item:focus{
     color:rgb(255, 255, 255);
-    background-color: black;
+    background-color: rgb(70, 53, 36);
+    border-radius: 15%;
   
   }
 .home-text{
@@ -38,16 +57,34 @@
     margin:5%;
 
 }
+.footer-img{
+    height: 48px;
+    width: 48px;
+}
 .footer{
-    background-color: black;
+    background-color: rgb(139, 110, 69);
     color:white;
     display: flex;
     justify-content: space-evenly;
     padding:10px;
     position: absolute;
-    top:90%;
+    top:85%;
     width: 100vw;
-    height: 8vh;
+    height: 11vh;
 }
 
+#insta-img{
+    background-image: url("../images/insta.png");
+  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mail-img{
+    background-image: url("../images/mail.png");
+    background-position: center;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+}

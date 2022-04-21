@@ -6,6 +6,8 @@ import About from "./About";
 import Navbar from "./NavBar";
 import Contact from "./Contact";
 import BookTrip from "./BookTrip";
+import Shop from "./Shop";
+import Footer from "./Footer";
 
 function App() {
  
@@ -15,22 +17,19 @@ function App() {
     
       <Router>
          <Navbar />
-         <h1 className="home-title">Old North Acres</h1>
+         <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
          <Routes>
            <Route path="/" element={<Home />}/>
            <Route path="/about" element={<About />}/>
-           <Route path="/contact" element={<Contact />}/>
            <Route path="/book" element={<BookTrip />}/>
+           <Route path="/shop" element={<Shop />}/>
+           <Route path="/contact" element={<Contact />}/>
         </Routes>
       </Router>
 
      
 
-    <footer className="footer">
-      <div>instagram link</div>
-      <div>email link to contact</div>
-      <div></div>
-    </footer>
+    <Footer/>
       
      
     
