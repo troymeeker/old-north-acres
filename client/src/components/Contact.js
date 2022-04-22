@@ -8,29 +8,41 @@ function Contact(){
 
     }
     return(
-       <div>
+       <div className="contact">
         <h3>Contact us for more information!</h3> 
         <form onSubmit={handleOnSubmit} className="form">
+            <input
+                    label='First Name'
+                    name='first-name'
+                    placeholder='First Name'
+                    required
+                    className='form-input'
+            /><br/>
+            <input
+                    label='Last name'
+                    name='last-name'
+                    placeholder='Last Name'
+                    required
+                    className='form-input'
+            /><br/>
             <input 
             
                 label='Email'
                 name='user_email'
-                placeholder='Email...'
+                placeholder='Email Address'
                 required
+                className='form-input'
                 
-          />
-           <input
-                label='Name'
-                name='user_name'
-                placeholder='Name...'
-                required
-          />
+          /><br/>
+       
            <input 
                 label='Message'
                 name='user_message'
                 placeholder='Message...'
                 required
+                className='form-message'
           />
+          <br/>
         {/* <Form.Field
         //   id=’form-input-control-email'
         //   control={Input}

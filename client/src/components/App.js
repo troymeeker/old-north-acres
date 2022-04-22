@@ -9,6 +9,7 @@ import BookTrip from "./BookTrip";
 import Shop from "./Shop";
 import Footer from "./Footer";
 
+
 function App() {
  
 
@@ -28,7 +29,7 @@ function App() {
       </Router>
 
      
-
+   
     <Footer/>
       
      

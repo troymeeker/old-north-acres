@@ -29,13 +29,13 @@
   
   }
   .old-north-img{
-      height: 45vh;
-      width: 100vw;
+      height: 30vh;
+      width: inherit;
       
       background-image: url('../images/oldnorthmain.jpg');
-      background-position: center;
+      background-position:center;
       background-size: cover;
-      position: relative;
+   
       
 
       
@@ -55,22 +55,96 @@
     border-radius: 10px;
     padding: 4%;
     margin:5%;
+    background-color: rgb(232, 232, 232);
+    width: fit-content;
+  
 
+}
+.form-message{
+    height: 90px;
+    width: 350px;
+    margin: 5px;
+}
+.form-input{
+    height:20px;
+    width: 250px;
+    margin: 5px;
+
+}
+.book_trip{
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(210, 191, 167);
+    padding: 2%;
+}
+.shop{
+    height:90vh;
+    text-align: center;
+    background-color: rgb(210, 191, 167);
+    padding: 2%;
+}
+.about{
+    height: 60vh;
+    text-align: center;
+    background-color: rgb(210, 191, 167);
+    padding: 2%;
+}
+.home{
+    height: 90vh;
+    background-color: rgb(210, 191, 167);
+    padding: 2%;
+}
+.contact{
+    height:80vh;
+    text-align: center;
+    background-color: rgb(210, 191, 167);
+    padding: 2%;
 }
 .footer-img{
     height: 48px;
     width: 48px;
 }
+.unauthpage{
+  
+    line-height: 35px;
+    padding: 25px;
+    height: 100vh;
+    text-align: center;
+  }
+  .signup{
+    background-color: rgb(147, 185, 147);
+    line-height: 30px;
+    padding: 10px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+    left: 30%;
+    border-radius: 10%;
+    
+  }
+  .login{
+   background-color: rgb(147, 185, 147);
+    line-height: 30px;
+    padding: 10px;
+    width: 350px;
+    text-align: center;
+    border: 1.5px solid black;
+    position: relative;
+    left: 30%;
+    border-radius: 10%;
+  
+  }
 .footer{
     background-color: rgb(139, 110, 69);
     color:white;
     display: flex;
     justify-content: space-evenly;
     padding:10px;
-    position: absolute;
-    top:85%;
+    /* position: absolute;
+    top:85%; */
     width: 100vw;
-    height: 11vh;
+    height: 13vh;
 }
 
 #insta-img{
