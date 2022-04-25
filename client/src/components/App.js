@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Navbar from "./NavBar";
-import Contact from "./Contact";
+import ContactForm from "./ContactForm";
 import BookTrip from "./BookTrip";
 import Shop from "./Shop";
 import Footer from "./Footer";
@@ -24,7 +24,7 @@ function App() {
            <Route path="/about" element={<About />}/>
            <Route path="/book" element={<BookTrip />}/>
            <Route path="/shop" element={<Shop />}/>
-           <Route path="/contact" element={<Contact />}/>
+           <Route path="/contact" element={<ContactForm />}/>
         </Routes>
       </Router>
 

@@ -1,48 +1,45 @@
 *{
     margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
 }
 .home-title{
     text-align: center;
-    padding-top: 75px;
-    color: rgb(36, 36, 36);
+    padding-top: 55px;
+    color: rgb(22, 22, 22);
     
-
 }
 .navbar{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    
-    background-color: rgb(107, 85, 57);
-  
+    background-color: rgb(135, 131, 121);
     height: 9vh;
     padding: 8px;
 }
 .nav-item{
+   
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-weight: bold;
-    color: rgb(205, 205, 205);
+    color: rgb(255, 255, 255);
     padding: 20px;
   
   }
   .old-north-img{
       height: 30vh;
       width: inherit;
-      
       background-image: url('../images/oldnorthmain.jpg');
       background-position:center;
       background-size: cover;
    
       
-
-      
   }
   .nav-item:focus{
-    color:rgb(255, 255, 255);
-    background-color: rgb(70, 53, 36);
+    color:rgb(0, 0, 0);
+    background-color: rgb(186, 186, 186);
     border-radius: 15%;
   
   }
@@ -51,14 +48,21 @@
     margin:20px;
 }
 .form{
-    border: 1px solid lightgray;
+  
     border-radius: 10px;
     padding: 4%;
-    margin:5%;
-    background-color: rgb(232, 232, 232);
+    margin: 5%;
+    background-color: rgb(200,190,180);
     width: fit-content;
-  
-
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: .9px solid rgb(113, 112, 112);
+    position: absolute;
+    left: 20%;
+    border-radius: 10%;
+    /* box-shadow: 10px; */
 }
 .form-message{
     height: 90px;
@@ -67,43 +71,84 @@
 }
 .form-input{
     height:20px;
-    width: 250px;
+    width: 200px;
     margin: 5px;
 
+}
+.submit-button{
+    width: 80px;
+    padding: 7px;
+    background-color: rgb(193, 192, 192);
+    border-radius: 8px;
+   
+ 
+}
+.submit-button:hover{
+   
+    background-color: rgb(120, 120, 120);
+    color:white;
+  
+ 
 }
 .book_trip{
     height: 100vh;
     text-align: center;
-    background-color: rgb(210, 191, 167);
+    background-color: rgb(160,175,135);
     padding: 2%;
 }
 .shop{
     height:90vh;
     text-align: center;
-    background-color: rgb(210, 191, 167);
+    background-color: rgb(160,175,135);
     padding: 2%;
+}
+.top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.mid-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.bot-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.grid-item{
+    border:1px solid black;
+    width: fit-content;
+    margin:10px;
+    width: 90px;
+    height: 55px;
+    background-color: green;
+}
+.grid-item:hover{
+    position: relative;
+    top: 7px;
+    /* background-color: rgb(1, 159, 1); */
+    opacity: 60%;
 }
 .about{
     height: 60vh;
     text-align: center;
-    background-color: rgb(210, 191, 167);
+    background-color: rgb(160,175,135);
     padding: 2%;
 }
 .home{
     height: 90vh;
-    background-color: rgb(210, 191, 167);
+    background-color: rgb(160,175,135);
     padding: 2%;
 }
 .contact{
     height:80vh;
     text-align: center;
-    background-color: rgb(210, 191, 167);
+    background-color: rgb(160,175,135);
     padding: 2%;
 }
-.footer-img{
-    height: 48px;
-    width: 48px;
-}
+
 .unauthpage{
   
     line-height: 35px;
@@ -112,39 +157,37 @@
     text-align: center;
   }
   .signup{
-    background-color: rgb(147, 185, 147);
+    background-color: rgb(199,193,180);
     line-height: 30px;
     padding: 10px;
     width: 350px;
     text-align: center;
-    border: 1px solid black;
+    border: .9px solid rgb(199,193,180);
     position: relative;
     left: 30%;
     border-radius: 10%;
     
   }
   .login{
-   background-color: rgb(147, 185, 147);
+   background-color: rgb(199,193,180);
     line-height: 30px;
     padding: 10px;
     width: 350px;
     text-align: center;
-    border: 1.5px solid black;
+    border: .9px solid rgb(113, 112, 112);
     position: relative;
     left: 30%;
     border-radius: 10%;
   
   }
 .footer{
-    background-color: rgb(139, 110, 69);
+    background-color: rgb(135,131,121);
     color:white;
     display: flex;
     justify-content: space-evenly;
     padding:10px;
-    /* position: absolute;
-    top:85%; */
     width: 100vw;
-    height: 13vh;
+    height: 15vh;
 }
 
 #insta-img{
@@ -160,5 +203,17 @@
 
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60px;
+    width: 65px;
+    
+}
+.footer-img{
+    height: 50px;
+    width:50px;
+    margin-top: 12px;
+    /* position: relative;
+    top: 2px; */
+}
+.footer-img:hover{
+    position: relative;
+    bottom: 5px;
 }
