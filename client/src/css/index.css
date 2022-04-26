@@ -46,6 +46,7 @@
 .home-text{
     text-align: center;
     margin:20px;
+    line-height: 30px;
 }
 .form{
   
@@ -132,10 +133,24 @@
     opacity: 60%;
 }
 .about{
-    height: 60vh;
+    height: 75vh;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 2%;
+    
+}
+.about-section{
+    line-height: 30px;
+}
+.sheep{
+    
+    height: 300px;
+    width: 250px; 
+
+
+    background-position: center;
+    background-size: cover; 
+   
 }
 .home{
     height: 90vh;
@@ -191,14 +206,14 @@
 }
 
 #insta-img{
-    background-image: url("../images/insta.png");
+  
   
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 #mail-img{
-    background-image: url("../images/mail.png");
+   
     background-position: center;
 
     background-repeat: no-repeat;

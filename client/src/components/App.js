@@ -25,13 +25,14 @@ function App() {
            <Route path="/book" element={<BookTrip />}/>
            <Route path="/shop" element={<Shop />}/>
            <Route path="/contact" element={<ContactForm />}/>
-        </Routes>
-      </Router>
-
-     
-   
-    <Footer/>
       
+
+       </Routes>
+   
+        <Footer/>  
+    
+      
+      </Router>
      
     
     </div>
