@@ -30,7 +30,7 @@
   }
   .old-north-img{
       height: 30vh;
-      width: inherit;
+      width: 100vw;
       background-image: url('../images/oldnorthmain.jpg');
       background-position:center;
       background-size: cover;
@@ -156,6 +156,7 @@
     height: 90vh;
     background-color: rgb(160,175,135);
     padding: 2%;
+    width: 100vw;
 }
 .contact{
     height:80vh;

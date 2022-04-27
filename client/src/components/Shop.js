@@ -1,8 +1,10 @@
 import React from "react";
 
-function Shop(){
+
+function Shop({currentUser}){
     return (
         <div className="shop">
+            {/* <h3>{`Hello ${currentUser}`}</h3> */}
             <h1>Shop</h1>
             <div className="top-row">
                 <div className="grid-item">Item 1</div>

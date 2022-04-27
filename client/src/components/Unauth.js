@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import Login from "./Login"
 import Signup from "./Signup";
 
-function UnauthenticatedUserApp(){
+function Unauth(){
 
   const [signedUp, setSignedUp] = useState(false)
 
@@ -26,4 +26,4 @@ function UnauthenticatedUserApp(){
     )
 }
 
-export default UnauthenticatedUserApp;
+export default Unauth;
