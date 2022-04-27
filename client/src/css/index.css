@@ -17,6 +17,7 @@
     height: 9vh;
     padding: 8px;
 }
+
 .nav-item{
    
     text-decoration: none;
@@ -28,6 +29,12 @@
     padding: 20px;
   
   }
+  .nav-item:focus{
+    color:rgb(0, 0, 0);
+    background-color: rgb(186, 186, 186);
+    border-radius: 15%;
+  
+  }
   .old-north-img{
       height: 30vh;
       width: 100vw;
@@ -37,12 +44,7 @@
    
       
   }
-  .nav-item:focus{
-    color:rgb(0, 0, 0);
-    background-color: rgb(186, 186, 186);
-    border-radius: 15%;
   
-  }
 .home-text{
     text-align: center;
     margin:20px;
@@ -133,7 +135,7 @@
     opacity: 60%;
 }
 .about{
-    height: 75vh;
+    height: 80vh;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 2%;
@@ -171,6 +173,17 @@
     padding: 25px;
     height: 100vh;
     text-align: center;
+
+    background-color: rgb(160,175,135);
+      
+    height: 150vh;
+    
+  }
+  .logout-button{
+      border-radius: 5px;
+      height: fit-content;
+      padding:7px;
+      margin-top: 9px;
   }
   .signup{
     background-color: rgb(199,193,180);

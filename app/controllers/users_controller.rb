@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
+
+
+    def show
+        if current_user 
+          render json: current_user, status: :ok
+        else
+          render json: { error: "No active session"}, status: :unauthorized
+        end
+      end
 
      # POST /signup
   def create

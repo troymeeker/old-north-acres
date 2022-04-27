@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
-
+import React, {  useEffect, useState } from "react";
+import '../css/index.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -8,8 +8,9 @@ import ContactForm from "./ContactForm";
 import BookTrip from "./BookTrip";
 import Shop from "./Shop";
 import Footer from "./Footer";
+import Unauth from "./Unauth";
 
- const UserContext = createContext();
+//  const UserContext = createContext();
 // const currentUser = 'current user here'
 
 function App() {
@@ -32,13 +33,14 @@ function App() {
   }, [])
  
 
-//  if (!authChecked) { return <div>test</div> }
-//     return (     
-//       currentUser ? (
-  return(
-    <UserContext.Provider value={currentUser}>
+ if (!authChecked) { return <div>test</div> }
+    return (     
+      currentUser ? (
+  // return(
+    <div>
+    {/*  <UserContext.Provider value={currentUser}> */}
       <Router>
-         <Navbar />
+         <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
          <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
        
          <Routes>
@@ -56,9 +58,11 @@ function App() {
       
       </Router>
      
-    </UserContext.Provider>
-   
-  );
+    {/* </UserContext.Provider> */}
+   </div>
+  ):(
+    <Unauth setCurrentUser={setCurrentUser}/>
+  ));
 }
 
 export default App;
