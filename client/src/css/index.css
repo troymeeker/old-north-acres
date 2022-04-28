@@ -153,11 +153,8 @@
     margin:3vw;
 }
 .sheep{
-    
     height: 300px;
     width: 250px; 
-
-
     background-position: center;
     background-size: cover; 
    
@@ -176,9 +173,6 @@
     padding: 40px;
     height: 100vh;
     text-align: center;
-    
-   
-
     background-color: rgb(165,170,175);
         
   }
@@ -193,6 +187,7 @@
     background-color: rgb(160,155,145);
     line-height: 30px;
     padding: 10px;
+    /* margin-top: 10px; */
     width: 350px;
     text-align: center;
     border: .9px solid rgb(199,193,180);
@@ -224,8 +219,6 @@
 }
 
 #insta-img{
-  
-  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -233,7 +226,6 @@
 #mail-img{
    
     background-position: center;
-
     background-repeat: no-repeat;
     background-size: cover;
     width: 65px;

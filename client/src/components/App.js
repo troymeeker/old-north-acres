@@ -9,6 +9,7 @@ import BookTrip from "./BookTrip";
 import Shop from "./Shop";
 import Footer from "./Footer";
 import Unauth from "./Unauth";
+import instalogo from "../images/insta.png"
 
 //  const UserContext = createContext();
 // const currentUser = 'current user here'
@@ -57,8 +58,17 @@ function App() {
      
    </div>
   ):(
-      <Unauth />
-    
+    <>
+     {/* <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/> */}
+    <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
+   
+      <Unauth setCurrentUser={setCurrentUser}/>
+      <footer className="footer">
+         <div className="footer-img" >
+            <a href="https://www.instagram.com/oldnorthacres/" target="_blank" alt="instagram" rel="noreferrer"><img src={instalogo} alt="instagram logo" id="insta-img" /></a>
+         </div>
+      </footer>
+    </>
   ));
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const Login = ({setCurrentUser}) => {
+const Login = ({setCurrentUser , acctExists, setAcctExists}) => {
     
 
     const [username, setUsername] = useState('');
@@ -62,10 +62,7 @@ const Login = ({setCurrentUser}) => {
 
         </form>
         <p>Don't have an account? </p>
-            <button > 
-              Signup
-             
-            </button>
+            <button onClick={()=> setAcctExists(!acctExists)}> Signup </button>
         {/* { signedUp ? () : ( <button onClick={handleSigninToggle}>Create Account</button>)}
          
          { signedUp ? (<Signup setCurrentUser={setCurrentUser}/>): (null)} */}

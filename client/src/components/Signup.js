@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import '../css/index.css';
 
-const Signup = ({setCurrentUser}) => {
+const Signup = ({setCurrentUser, setAcctExists, acctExists}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
@@ -55,11 +55,7 @@ const Signup = ({setCurrentUser}) => {
                
             </form>
             <p>Already have an account? </p>
-            <button > 
-               
-                Log In
-               
-            </button>
+            <button onClick={() => setAcctExists(!acctExists)}> Log In </button>
         
       
             </div>

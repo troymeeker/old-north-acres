@@ -1,26 +1,22 @@
-import React from "react";
-
+import React, {useState} from "react";
 import Login from "./Login"
 import Signup from "./Signup";
 
 
 function Unauth({setCurrentUser}){
 
+const [acctExists, setAcctExists] = useState(false)
  
 
     return (
         <div className="unauthpage">
            
-         {/* Add functionality to toggle signup screen, Dont have an account?  Create Account here*/}
-       
-            
-          <Login setCurrentUser={setCurrentUser}/>
-          <Signup setCurrentUser={setCurrentUser}/>
-   
-      {/* <h2 className="unauth-text">Don't Have an account yet? </h2> */}
-    
-            
-          
+       {!acctExists ? (<Signup setCurrentUser={setCurrentUser} setAcctExists={setAcctExists} acctExists={acctExists}/>
+        ) : (
+         <Login setCurrentUser={setCurrentUser} setAcctExists={setAcctExists} acctExists={acctExists} />
+       )
+      }
+                
         </div>
     )
 }
