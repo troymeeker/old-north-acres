@@ -1,6 +1,6 @@
 *{
     margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
  
 }
 .home-title{
@@ -8,6 +8,17 @@
     padding-top: 55px;
     color: rgb(22, 22, 22);
     
+}
+.home{
+    height: 90vh;
+    background-color: rgb(160,175,135);
+    padding: 2%;
+    width: inherit;
+    text-align: center;
+}
+.home-text{
+    margin:5vw;
+    line-height: 30px;
 }
 .navbar{
     list-style: none;
@@ -37,7 +48,7 @@
   }
   .old-north-img{
       height: 30vh;
-      width: 100vw;
+      width: inherit;
       background-image: url('../images/oldnorthmain.jpg');
       background-position:center;
       background-size: cover;
@@ -45,11 +56,7 @@
       
   }
   
-.home-text{
-    text-align: center;
-    margin:20px;
-    line-height: 30px;
-}
+
 .form{
   
     border-radius: 10px;
@@ -135,7 +142,7 @@
     opacity: 60%;
 }
 .about{
-    height: 80vh;
+    height: fit-content;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 2%;
@@ -143,6 +150,7 @@
 }
 .about-section{
     line-height: 30px;
+    margin:3vw;
 }
 .sheep{
     
@@ -154,12 +162,7 @@
     background-size: cover; 
    
 }
-.home{
-    height: 90vh;
-    background-color: rgb(160,175,135);
-    padding: 2%;
-    width: 100vw;
-}
+
 .contact{
     height:80vh;
     text-align: center;
@@ -170,15 +173,16 @@
 .unauthpage{
   
     line-height: 35px;
-    padding: 25px;
+    padding: 40px;
     height: 100vh;
     text-align: center;
-
-    background-color: rgb(160,175,135);
-      
-    height: 150vh;
     
+   
+
+    background-color: rgb(165,170,175);
+        
   }
+ 
   .logout-button{
       border-radius: 5px;
       height: fit-content;
@@ -186,7 +190,7 @@
       margin-top: 9px;
   }
   .signup{
-    background-color: rgb(199,193,180);
+    background-color: rgb(160,155,145);
     line-height: 30px;
     padding: 10px;
     width: 350px;
@@ -198,7 +202,7 @@
     
   }
   .login{
-   background-color: rgb(199,193,180);
+   background-color: rgb(160,155,145);
     line-height: 30px;
     padding: 10px;
     width: 350px;
@@ -215,7 +219,7 @@
     display: flex;
     justify-content: space-evenly;
     padding:10px;
-    width: 100vw;
+    width: inherit;
     height: 15vh;
 }
 

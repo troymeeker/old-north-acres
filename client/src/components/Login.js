@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 
-
 const Login = ({setCurrentUser}) => {
-  
+    
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     
+   
 
     function loginUser(e){
         e.preventDefault();
-        fetch("/login", {
+        fetch("/userlogin", {
             method:"POST", 
             headers: {
                 "Content-Type": "application/json",
@@ -21,7 +21,8 @@ const Login = ({setCurrentUser}) => {
             .then((res) => {
                 if(res.ok){
                     res.json().then(user => {
-                         setCurrentUser(user)
+                        setCurrentUser(user)
+                        
               })
             } else {
                 res.json().then((errors) => { 
@@ -34,11 +35,12 @@ const Login = ({setCurrentUser}) => {
              setUsername('')
              setPassword('')
     }
+   
 
     return (
         <div className="login">
             <h2 className="unauth-header">LOGIN</h2>
-        <form onSubmit={loginUser}>
+        <form onSubmit={loginUser} >
             <label>Username</label><br/>
             <input 
                 type="text" 
@@ -57,7 +59,17 @@ const Login = ({setCurrentUser}) => {
                /><br/>
             <button className="unauth-button">LOG IN</button>
 
+
         </form>
+        <p>Don't have an account? </p>
+            <button > 
+              Signup
+             
+            </button>
+        {/* { signedUp ? () : ( <button onClick={handleSigninToggle}>Create Account</button>)}
+         
+         { signedUp ? (<Signup setCurrentUser={setCurrentUser}/>): (null)} */}
+        
         </div>
     )
 }

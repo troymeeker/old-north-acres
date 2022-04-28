@@ -7,7 +7,7 @@ const Signup = ({setCurrentUser}) => {
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
     
-
+    
 
     function createUser(e){
         e.preventDefault();
@@ -16,7 +16,7 @@ const Signup = ({setCurrentUser}) => {
             password, 
             password_confirmation: passwordConfirmation
         }
-        fetch("/signup", {
+        fetch("/usersignup", {
             method:"POST", 
             headers: {
                 "Content-Type": "application/json"
@@ -27,11 +27,12 @@ const Signup = ({setCurrentUser}) => {
             if(res.ok){
                 res.json().then(user => {
                     setCurrentUser(user)
+                   
                 })
             } else {
                 res.json().then((error) => {
                       console.log(error);
-                    //   debugger;
+                    
                      alert(JSON.stringify(error.error));
                 })
             }
@@ -53,7 +54,14 @@ const Signup = ({setCurrentUser}) => {
                 <button type="submit" className="unauth-button">CREATE ACCOUNT</button>
                
             </form>
-            
+            <p>Already have an account? </p>
+            <button > 
+               
+                Log In
+               
+            </button>
+        
+      
             </div>
     )
 }

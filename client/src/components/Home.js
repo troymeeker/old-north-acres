@@ -9,7 +9,7 @@ function Home({currentUser}){
          
         
           <p className="home-text">
-              {/* <h3>{`Hello ${currentUser}`}</h3> */}
+             
               From the Blue Ridge Mountains to the Intracoastal Waterway, North Carolina has some sweet spots to tuck in
               for a glamping getaway.
               Its tough to beat the gorgeous setting of the regions's hills, woods, and rivers.
@@ -17,7 +17,7 @@ function Home({currentUser}){
               our options offer a back-to-nature feel without sacrificing any creature comforts
               — in fact, some are downright luxurious.
           </p>
-          <p className="home-text">
+          {/* <p className="home-text">
            test
           </p>
           <p className="home-text">
@@ -28,7 +28,7 @@ function Home({currentUser}){
           </p>
           <p className="home-text">
              test
-          </p>
+          </p> */}
 
          
         </div>

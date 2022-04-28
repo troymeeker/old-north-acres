@@ -6,6 +6,7 @@ function Shop({currentUser}){
         <div className="shop">
             {/* <h3>{`Hello ${currentUser}`}</h3> */}
             <h1>Shop</h1>
+            <p>current user can add items to cart</p>
             <div className="top-row">
                 <div className="grid-item">Item 1</div>
                 <div className="grid-item">Item 2</div>

@@ -1,6 +1,6 @@
 import React, {  useEffect, useState } from "react";
-import '../css/index.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Navbar from "./NavBar";
@@ -33,35 +33,32 @@ function App() {
   }, [])
  
 
- if (!authChecked) { return <div>test</div> }
+ if (!authChecked) { return <div></div> }
     return (     
       currentUser ? (
-  // return(
+ 
     <div>
-    {/*  <UserContext.Provider value={currentUser}> */}
-      <Router>
-         <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-         <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
+    
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
        
-         <Routes>
-           <Route path="/" element={<Home currentUser={currentUser}/>}/>
-           <Route path="/about" element={<About />}/>
-           <Route path="/book" element={<BookTrip currentUser={currentUser}/>}/>
-           <Route path="/shop" element={<Shop />}/>
-           <Route path="/contact" element={<ContactForm />}/>
+      <Routes>
+          <Route path="/" element={<Home currentUser={currentUser}/>}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/book" element={<BookTrip currentUser={currentUser}/>}/>
+          <Route path="/shop" element={<Shop />}/>
+          <Route path="/contact" element={<ContactForm />}/>
       
 
-       </Routes>
+      </Routes>
    
-        <Footer/>  
+      <Footer/>   
     
-      
-      </Router>
      
-    {/* </UserContext.Provider> */}
    </div>
   ):(
-    <Unauth setCurrentUser={setCurrentUser}/>
+      <Unauth />
+    
   ));
 }
 

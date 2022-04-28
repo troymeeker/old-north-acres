@@ -3,7 +3,7 @@ import React from "react";
 function Logout({setCurrentUser}){
 
     function handleLogout(){
-        fetch("/logout", {
+        fetch("/userlogout", {
             method: "DELETE" 
         })
        setCurrentUser(null)
