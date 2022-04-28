@@ -10,7 +10,7 @@ function About(){
               <p> We love adventuring, caring for our small group of farm animals, and living in beautiful North Carolina. <br/>
              
                Here at Old North Acres we offer a handful of delightful lodging options, whether you want to simply park your van and sit by our firepits, stay in our renovated school bus, our 
-               small cabin, or our guest house, we have an option for you!</p> <br/>
+               small cabin, or our yurt, we have an option for you!</p> <br/>
             <div ><img src={sheep} alt="sheep" className="sheep"/> </div>
               <p>Come visit us, We'd love to show you why we love it here!</p> 
            </div>

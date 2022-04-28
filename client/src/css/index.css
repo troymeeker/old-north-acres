@@ -101,11 +101,23 @@
  
 }
 .book_trip{
-    height: 100vh;
+    height: fit-content;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 2%;
+   
 }
+.yurt-photo{
+    height: 280px;
+    width: 400px;
+    display: flexbox;
+
+    margin:20px;
+}
+.yurt-photo:hover{
+    opacity: 65%;
+    filter: grayscale(85%);
+} 
 .shop{
     height:90vh;
     text-align: center;
@@ -208,6 +220,7 @@
     border-radius: 10%;
   
   }
+ 
 .footer{
     background-color: rgb(135,131,121);
     color:white;

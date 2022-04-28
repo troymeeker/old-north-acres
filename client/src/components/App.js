@@ -59,7 +59,7 @@ function App() {
    </div>
   ):(
     <>
-     {/* <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/> */}
+    
     <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
    
       <Unauth setCurrentUser={setCurrentUser}/>
