@@ -5,9 +5,8 @@ function Popup(props){
         <div className="popup">
             <div className="popup-inner">
            
-              
               {props.children}
-              <button className="popup-button" onClick={() => props.setPopup(false)}>x</button>
+              <button className="popup-button" onClick={() => props.setPopup((popup) => !popup)}>&times;</button>
             </div>
         </div>
     ) : ""; 

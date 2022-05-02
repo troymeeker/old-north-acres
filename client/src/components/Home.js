@@ -14,7 +14,7 @@ function Home({currentUser}){
               for a glamping getaway.
               Its tough to beat the gorgeous setting of the regions's hills, woods, and rivers.
               And whether you're looking for an outdoorsy adventure or a simple weekend away to unplug and unwind, without getting too dirty, 
-              our options offer a back-to-nature feel without sacrificing any creature comforts
+              our lodging options offer a back-to-nature feel without sacrificing any creature comforts
               — in fact, some are downright luxurious.
           </p>
           {/* <p className="home-text">
