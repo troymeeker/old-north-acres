@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 
 
 const Login = ({setCurrentUser , acctExists, setAcctExists}) => {
@@ -7,6 +8,7 @@ const Login = ({setCurrentUser , acctExists, setAcctExists}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     
+const navigate = useNavigate();
    
 
     function loginUser(e){
@@ -22,7 +24,7 @@ const Login = ({setCurrentUser , acctExists, setAcctExists}) => {
                 if(res.ok){
                     res.json().then(user => {
                         setCurrentUser(user)
-                        
+                        navigate('/', {replace: true})
               })
             } else {
                 res.json().then((errors) => { 
