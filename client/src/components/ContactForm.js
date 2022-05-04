@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { ThemeContext } from './App';
 
 import emailjs from 'emailjs-com';
 
 function ContactForm(){
+    const darkTheme = useContext(ThemeContext)
+    const themeStyles = {
+        backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
+       
+        color: darkTheme ? '#333' : '#000',
+       
+    }
+    const formStyles = {
+        backgroundColor: darkTheme  ? '#333': '#888', 
+        color: darkTheme ? '#999': '#333'
+    }
     const SERVICE_ID = 'service_meagxfb';
     const TEMPLATE_ID = 'template_jm63u5s';
     const USER_ID = '33t3tPMjxMD4rRJ5P';
@@ -27,9 +39,9 @@ function ContactForm(){
 
     return(
         
-        <div className='contact'>
+        <div className='contact' style={themeStyles}>
            
-         <form onSubmit={handleOnSubmit} className="form">
+         <form onSubmit={handleOnSubmit} className="form" style={formStyles}>
             <h3>Contact us for more information!</h3> 
            
             <input

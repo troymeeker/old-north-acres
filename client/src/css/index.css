@@ -46,6 +46,11 @@
     border-radius: 15%;
   
   }
+  .dark-button{
+      height: fit-content;
+      margin:15px;
+      width: 125px;
+  }
   .old-north-img{
       height: 30vh;
       width: inherit;

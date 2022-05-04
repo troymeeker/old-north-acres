@@ -1,10 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "./App";
 import sheep from '../images/sheep.png';
 
 function About(){
+    const darkTheme = useContext(ThemeContext)
+    const themeStyles = {
+        backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
+       
+        color: darkTheme ? '#CCC' : '#333'
+
+    }
 
     return(
-        <div className="about">
+        <div className="about" style={themeStyles}>
            <h2>About</h2> 
            <div className="about-section">
               <p> We love adventuring, caring for our small group of farm animals, and living in beautiful North Carolina. <br/>

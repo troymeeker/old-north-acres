@@ -11,12 +11,18 @@ import Footer from "./Footer";
 import Unauth from "./Unauth";
 import instalogo from "../images/insta.png"
 
-//  const UserContext = createContext();
+  export const ThemeContext = React.createContext();
 // const currentUser = 'current user here'
 
 function App() {
+
   const [currentUser, setCurrentUser] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false)
+
+  function toggleTheme(){
+    setDarkTheme(darkTheme => !darkTheme)
+  }
 
   useEffect(() => {
     fetch("/me")
@@ -39,12 +45,14 @@ function App() {
       currentUser ? (
  
     <div>
-    
-      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+    <ThemeContext.Provider value={darkTheme}>
+
+   
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} toggleTheme={toggleTheme} darkTheme={darkTheme}/>
         <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
        
       <Routes>
-          <Route path="/" element={<Home currentUser={currentUser}/>}/>
+          <Route path="/" element={<Home currentUser={currentUser} />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/book" element={<BookTrip currentUser={currentUser}/>}/>
           <Route path="/shop" element={<Shop />}/>
@@ -52,10 +60,11 @@ function App() {
       
 
       </Routes>
+     
    
       <Footer/>   
     
-     
+      </ThemeContext.Provider>
    </div>
   ):(
     <>

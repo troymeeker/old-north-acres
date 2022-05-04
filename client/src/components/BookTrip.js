@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { ThemeContext } from "./App";
 import yurt from "../images/yurt.jpg"
 import cabin from "../images/cabin.jpg"
 import schoolBus from "../images/school-bus.jpg"
@@ -6,6 +7,13 @@ import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickH
 
 
 function BookTrip(){ 
+    const darkTheme = useContext(ThemeContext)
+    const themeStyles = {
+        backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
+       
+        color: darkTheme ? '#CCC' : '#333'
+
+    }
  
    const [popup, setPopup] = useState(false); 
              
@@ -15,7 +23,7 @@ function BookTrip(){
 
 
     return (
-         <div className="book_trip"> 
+         <div className="book_trip" style={themeStyles}> 
             <h2>Schedule your trip!</h2>
           
             {/* <p>Form or calendar here to select trip and display trips for current user</p>  */}

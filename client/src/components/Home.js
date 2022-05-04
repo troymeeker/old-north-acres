@@ -1,14 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "./App";
 
-function Home({currentUser}){
+function Home({currentUser, toggleTheme}){
     // const UserContext = createContext();
     // const currentUser = useContext(UserContext);
 
+    const darkTheme = useContext(ThemeContext)
+    const themeStyles = {
+        backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
+       
+        color: darkTheme ? '#CCC' : '#333'
+
+    }
+
     return(
-        <div className="home">
+        <div className="home" style={themeStyles}>
          
-        
-          <p className="home-text">
+         <p className="home-text" >
              
               From the Blue Ridge Mountains to the Intracoastal Waterway, North Carolina has some sweet spots to tuck in
               for a glamping getaway.
@@ -17,21 +25,11 @@ function Home({currentUser}){
               our lodging options offer a back-to-nature feel without sacrificing any creature comforts
               — in fact, some are downright luxurious.
           </p>
-          {/* <p className="home-text">
-           test
-          </p>
-          <p className="home-text">
-             test
-          </p>
-          <p className="home-text">
-             test
-          </p>
-          <p className="home-text">
-             test
-          </p> */}
+         
 
          
         </div>
+       
     )
 }
 
