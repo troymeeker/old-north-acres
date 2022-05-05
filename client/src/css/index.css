@@ -126,8 +126,8 @@
     margin:20px;
 }
 .yurt-photo:hover{
-    opacity: 65%;
-    filter: grayscale(85%);
+    opacity: 75%;
+     filter: grayscale(65%); 
 } 
 .shop{
     height:90vh;
@@ -161,7 +161,7 @@
 .grid-item:hover{
     position: relative;
     top: 7px;
-    /* background-color: rgb(1, 159, 1); */
+  
     opacity: 60%;
 }
 .about{

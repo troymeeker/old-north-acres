@@ -28,19 +28,18 @@ function BookTrip(){
           
             {/* <p>Form or calendar here to select trip and display trips for current user</p>  */}
              <p>Click on one of our options to learn more! </p>
-  
-          
+               
               <OutsideClickHandler onOutsideClick={() => setPopup(false)}>  
-                 <div className="image-grid"  > 
+              <div className="image-grid"  > 
                     <img src={yurt} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
                     <img src={cabin} alt="cabin" className="yurt-photo" onClick={() => setPopup(true)}/>
                     <img src={schoolBus} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
-                </div>
-               </OutsideClickHandler >
+              </div>
+               </OutsideClickHandler > 
+           
                { popup && ( 
                     <div className="popup" >
                       <div className="popup-content">              
-                      
                         <h3>Lodge #_ </h3>
                         <p>description: _ </p>
                          <button className="popup-button" onClick={handleClose}>&times;</button>
