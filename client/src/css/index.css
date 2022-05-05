@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(135, 131, 121);
-    height: 9vh;
+    height: fit-content;
     padding: 8px;
 }
 
@@ -47,9 +47,13 @@
   
   }
   .dark-button{
-      height: fit-content;
+    
       margin:15px;
       width: 125px;
+      border-radius: 5px;
+      height: fit-content;
+      padding:7px;
+      margin-top: 9px;
   }
   .old-north-img{
       height: 30vh;
@@ -303,8 +307,3 @@
     right:16px;
 }
 
-/* .popup-button:hover{
-    background-color: rgb(72, 72, 72);
-    
-    color:white;
-} */

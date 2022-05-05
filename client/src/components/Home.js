@@ -22,8 +22,8 @@ function Home({currentUser, toggleTheme}){
               for a glamping getaway.
               Its tough to beat the gorgeous setting of the regions's hills, woods, and rivers.
               And whether you're looking for an outdoorsy adventure or a simple weekend away to unplug and unwind, without getting too dirty, 
-              our lodging options offer a back-to-nature feel without sacrificing any creature comforts
-              — in fact, some are downright luxurious.
+              our pet friendly lodging options offer a back-to-nature feel without sacrificing any creature comforts
+              — on second thought, they are downright luxurious.
           </p>
          
 

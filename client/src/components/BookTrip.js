@@ -11,7 +11,7 @@ function BookTrip(){
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
        
-        color: darkTheme ? '#CCC' : '#333'
+        color: darkTheme ? '#222' : '#333'
 
     }
  
@@ -31,7 +31,7 @@ function BookTrip(){
   
           
               <OutsideClickHandler onOutsideClick={() => setPopup(false)}>  
-                 <div className="image-grid" > 
+                 <div className="image-grid"  > 
                     <img src={yurt} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
                     <img src={cabin} alt="cabin" className="yurt-photo" onClick={() => setPopup(true)}/>
                     <img src={schoolBus} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
@@ -42,8 +42,10 @@ function BookTrip(){
                       <div className="popup-content">              
                       
                         <h3>Lodge #_ </h3>
+                        <p>description: _ </p>
                          <button className="popup-button" onClick={handleClose}>&times;</button>
-                        <p>This rustic lodging option sleeps _ and is great for_. </p>
+                        <p>sleeps: _  </p>
+                         <p>Shower: y/n</p>
                         <p>Click HERE to schedule your visit to Lodge #_</p>
                       </div>
                     </div>

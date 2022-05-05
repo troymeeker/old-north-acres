@@ -12,8 +12,8 @@ function ContactForm(){
        
     }
     const formStyles = {
-        backgroundColor: darkTheme  ? '#333': '#888', 
-        color: darkTheme ? '#999': '#333'
+        backgroundColor: darkTheme  ? 'rgb(120,120,120)': 'rgb(120,150,120)', 
+        color: darkTheme ? '#333': '#111'
     }
     const SERVICE_ID = 'service_meagxfb';
     const TEMPLATE_ID = 'template_jm63u5s';

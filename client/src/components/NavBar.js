@@ -18,14 +18,16 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
             <nav >
                 <ul className='navbar' style={themeStyles} >
                     <p>Welcome {currentUser.username[0].toUpperCase() + currentUser.username.substring(1)}</p>
-                    <button onClick={toggleTheme} className='dark-button'>DARK MODE: {darkTheme ? 'ON' : 'OFF'} </button>
+                   
                     <li><NavLink to='/' className="nav-item">HOME</NavLink></li>
                     <li><NavLink to='/about' className="nav-item">ABOUT</NavLink></li>
                     <li><NavLink to='/book' className="nav-item">BOOK YOUR TRIP</NavLink></li>
                     <li><NavLink to='/shop' className="nav-item">SHOP</NavLink></li>
                     <li><NavLink to='/contact' className="nav-item">CONTACT</NavLink></li>
-                    
-                    <Logout setCurrentUser={setCurrentUser}/>
+                  <div>
+                      <Logout setCurrentUser={setCurrentUser}/> 
+                      <button onClick={toggleTheme} className='dark-button'>DARK MODE: {darkTheme ? 'ON' : 'OFF'} </button>
+                  </div>
                 </ul>
                 
             </nav>  
