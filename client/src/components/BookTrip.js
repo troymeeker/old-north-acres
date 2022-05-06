@@ -1,12 +1,13 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { ThemeContext } from "./App";
-import yurt from "../images/yurt.jpg"
-import cabin from "../images/cabin.jpg"
-import schoolBus from "../images/school-bus.jpg"
+import Lodge from "./Lodge";
+
 import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 
 
 function BookTrip(){ 
+    const [lodgings, setLodgings] = useState([]);
+
     const darkTheme = useContext(ThemeContext)
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
@@ -21,6 +22,16 @@ function BookTrip(){
     setPopup(false);
    }
 
+     useEffect(() => {
+        fetch('/lodgings')
+        .then((resp) => resp.json())
+        .then((lodgings) => setLodgings(lodgings))
+      }, []);
+
+//    function findLodgeInfo(){
+   
+//    }
+
 
     return (
          <div className="book_trip" style={themeStyles}> 
@@ -30,11 +41,21 @@ function BookTrip(){
              <p>Click on one of our options to learn more! </p>
                
               <OutsideClickHandler onOutsideClick={() => setPopup(false)}>  
-              <div className="image-grid"  > 
-                    <img src={yurt} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
-                    <img src={cabin} alt="cabin" className="yurt-photo" onClick={() => setPopup(true)}/>
-                    <img src={schoolBus} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
+              <div> 
+
+               {lodgings.map((lodging) => (
+                    <Lodge 
+                        key={lodging.id} 
+                        setPopup={setPopup} 
+                        lodging={lodging}
+                    />
+               ))}
+
               </div>
+                    {/* <img src={yurt} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/>
+                    <img src={cabin} alt="cabin" className="yurt-photo" onClick={() => setPopup(true)}/>
+                    <img src={schoolBus} alt="yurt" className="yurt-photo" onClick={() => setPopup(true)}/> */}
+            
                </OutsideClickHandler > 
            
                { popup && ( 

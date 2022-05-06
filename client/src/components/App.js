@@ -21,7 +21,7 @@ function App() {
   const [darkTheme, setDarkTheme] = useState(false)
 
   function toggleTheme(){
-    setDarkTheme(darkTheme => !darkTheme)
+    setDarkTheme((darkTheme) => !darkTheme)
   }
 
   useEffect(() => {
