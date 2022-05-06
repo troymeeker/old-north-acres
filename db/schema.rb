@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_05_192626) do
 
   create_table "lodgings", force: :cascade do |t|
     t.string "description"
+    t.string "image"
     t.integer "sleeps"
     t.boolean "shower"
   end

@@ -116,18 +116,20 @@
     padding: 2%;
     display: inline-flex;
     flex-direction: column;
+    width: 100%;
    
 }
 .yurt-photo{
-    height: 280px;
-    width: 400px;
-    display: flexbox;
+    height: 270px;
+    width: 390px;
+    /* display: flexbox; */
 
     margin:20px;
 }
 .yurt-photo:hover{
-    opacity: 75%;
-     filter: grayscale(65%); 
+    opacity: 55%;
+    /* filter: grayscale(65%);  */
+    
 } 
 .shop{
     height:90vh;
