@@ -42,7 +42,6 @@ function BookTrip(){
                {lodgings.map((lodging) => (
                     <Lodge 
                         key={lodging.id} 
-                      
                         lodging={lodging}
                     />
                ))}
@@ -51,15 +50,11 @@ function BookTrip(){
                   
             
                {/* </OutsideClickHandler >  */}
-{/*            
-               { popup && ( 
-                       
-                     <div className="popup" >
+{/*             { popup && ( 
+                           <div className="popup" >
                       {lodgings.map((lodging) => (
-                     
                       <div className="popup-content">  
                          <h3>Lodge #{lodging.id}</h3>
-                     
                         <p>description:{lodging.description}</p>
                          <button className="popup-button" onClick={handleClose}>&times;</button>
                         <p>sleeps: {lodging.sleeps} </p>
@@ -67,10 +62,8 @@ function BookTrip(){
                         <p>Click HERE to schedule your visit to Lodge #_</p>
                        </div>
                   ))}
-                 
-                        </div>   */}
-                     
-                {/* )}                 */}
+                  </div>   */}
+                     {/* )}                 */}
          </div> 
     );
 };

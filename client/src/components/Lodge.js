@@ -7,17 +7,15 @@ function Lodge({ lodging}){
 
     return (
        
-       <div  className="image-grid" >
+       <div  >
          <p>Lodge # {id}</p> 
-            <img src={image} className="yurt-photo" alt="" />  
-         
-            
+            <img src={image} className="yurt-photo" alt="" />           
              <p>{description}</p>
-           <p>Sleeps: {sleeps}</p>
-
-           <p>Shower: {shower ? 'Yes' : 'No'}</p>  
+             <p>Sleeps: {sleeps}</p>
+             <p>Shower: {shower ? 'Yes' : 'No'}</p>  
 
           
+
         </div>
     )
 }

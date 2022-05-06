@@ -22,7 +22,7 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                     <li><NavLink to='/' className="nav-item">HOME</NavLink></li>
                     <li><NavLink to='/about' className="nav-item">ABOUT</NavLink></li>
                     <li><NavLink to='/book' className="nav-item">BOOK YOUR TRIP</NavLink></li>
-                    <li><NavLink to='/shop' className="nav-item">SHOP</NavLink></li>
+                    <li><NavLink to='/reviews' className="nav-item">REVIEWS</NavLink></li>
                     <li><NavLink to='/contact' className="nav-item">CONTACT</NavLink></li>
                   <div>
                       <Logout setCurrentUser={setCurrentUser}/> 

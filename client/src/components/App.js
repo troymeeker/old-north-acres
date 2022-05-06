@@ -6,7 +6,7 @@ import About from "./About";
 import Navbar from "./NavBar";
 import ContactForm from "./ContactForm";
 import BookTrip from "./BookTrip";
-import Shop from "./Shop";
+import Reviews from "./Reviews";
 import Footer from "./Footer";
 import Unauth from "./Unauth";
 import instalogo from "../images/insta.png"
@@ -55,7 +55,7 @@ function App() {
           <Route path="/" element={<Home currentUser={currentUser} />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/book" element={<BookTrip currentUser={currentUser}/>}/>
-          <Route path="/shop" element={<Shop />}/>
+          <Route path="/reviews" element={<Reviews />}/>
           <Route path="/contact" element={<ContactForm />}/>
       
 
