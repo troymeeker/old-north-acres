@@ -55,7 +55,6 @@ function Reviews(){
                  <option id="category_id" value='3'>School Bus</option>
                
              </select><br/>
-
              <button className="add-btn">ADD REVIEW</button>
                   
          </form>

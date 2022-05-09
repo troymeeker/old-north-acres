@@ -8,9 +8,7 @@ function Home({currentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
-       
         color: darkTheme ? '#CCC' : '#333'
-
     }
 
     return(
@@ -25,9 +23,7 @@ function Home({currentUser, toggleTheme}){
               our pet friendly lodging options offer a back-to-nature feel without sacrificing any creature comforts
               — on second thought, they are downright luxurious.
           </p>
-         
-
-         
+        
         </div>
        
     )
