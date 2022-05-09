@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
  resources :lodgings, only: [:index, :show ]
- resources :reviews
+ resources :reviews, only: [:index, :show, :create, :update, :destroy]
  #  index, show, create, update, destroy only admin or creator can edit/ delete
 
 

@@ -4,6 +4,7 @@ class Review < ApplicationRecord
     belongs_to :user
     belongs_to :lodging
 
-
+  
+    validates :description, presence: true
      # join table for user/lodging
 end

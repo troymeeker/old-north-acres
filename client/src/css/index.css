@@ -233,6 +233,19 @@
     border-radius: 10%;
   
   }
+  .form-div{
+      border: 1px solid black;
+      /* margin: 20px; */
+      padding: 2%;
+      display: flex;
+    justify-content: center;
+  }
+  .lodge-item{
+    /* border: 1px solid black; */
+     line-height: 200%;
+    width: 95%;
+    margin: 8px;
+  }
  
 .footer{
     background-color: rgb(135,131,121);

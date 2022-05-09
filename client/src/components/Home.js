@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import { ThemeContext } from "./App";
 
-function Home({currentUser, toggleTheme}){
+function Home(){
     // const UserContext = createContext();
     // const currentUser = useContext(UserContext);
 
