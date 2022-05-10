@@ -12,7 +12,7 @@ function NewReview({onNewReview, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
 
     }
-    // const [username, setUserName] = useState("");
+    const [firstName, setFirstName] = useState("");
     const [description, setDescription] = useState("");
     const [rating, setRating] = useState("");
     const [lodging_id, setLodgingId] = useState("");
@@ -22,26 +22,27 @@ function NewReview({onNewReview, reviews, setReviews}){
         e.preventDefault();
          
         const review = {
-            // username: username, 
+            firstName: firstName, 
             description: description, 
             rating: rating, 
             lodging_id: lodging_id, 
             
         }
         onNewReview(review)
-        // setUserName("")
+        setFirstName("")
         setDescription("")
         setRating("")
         setLodgingId("")
         // console.log(review);
-       setReviews(review);
+        // setReviews
 
    } 
-//    function handleUserNameChange(e){
-//        setUserName(e.target.value)
-//    }
+   function handleFirstNameChange(e){
+       setFirstName(e.target.value)
+   }
    function handleDescriptionChange(e){
        setDescription(e.target.value)
+       
    }
      function handleRatingChange(e){
         setRating(e.target.value)
@@ -59,14 +60,14 @@ function NewReview({onNewReview, reviews, setReviews}){
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
            <h4>CREATE NEW REVIEW</h4><br/>
-             {/* <label>Your Name </label>
+             <label>Your Name </label>
              <input
                 type="text"
-                placeholder="user name"
+                placeholder="first name"
                 id="user_name"
-                onChange={handleUserNameChange}
-                value={username}
-               /><br/> */}
+                onChange={handleFirstNameChange}
+                value={firstName}
+               /><br/>
              <label>Description </label>
              <textarea 
                 type="text"

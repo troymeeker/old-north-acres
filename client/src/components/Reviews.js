@@ -11,9 +11,20 @@ function Reviews(){
         .then((reviews) => setReviews(reviews))
       }, [setReviews]); 
    
-      function handleReviewDelete(id){
-        const updatedReviews = reviews.filter((rev) => rev.id !== id)
-        setReviews(updatedReviews);
+    function handleReviewDelete(id){
+      const updatedReviews = reviews.filter((rev) => rev.id !== id)
+      setReviews(updatedReviews);
+    }
+    function handleReviewEdit(updatedReview){
+        const updatedReviews = reviews.map((review) => {
+            if (review.id === updatedReview.id) {
+                return updatedReview;
+            } else {
+                return review;
+            }
+        })
+        setReviews(updatedReviews)
+
     }
  
     return (
@@ -24,6 +35,7 @@ function Reviews(){
                 key={review.id}
                 review={review}
                 onDelete={handleReviewDelete}
+                onEdit={handleReviewEdit}
               
              />
            ))}

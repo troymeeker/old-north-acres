@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
         review = current_user.reviews.create(review_params)
     
         if review.id
-          render json: review, status: :created
+          render json: review,  status: :created
         else
           render json:{ error: review.errors.full_messages.to_sentence}, status: :unprocessable_entity
         end
