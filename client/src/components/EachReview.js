@@ -1,18 +1,39 @@
 import React from 'react'
 
-function EachReview({review}){
+function EachReview({review, onDelete}){
+    const { id, description, rating, lodging_id, user_can_modify, user_id } = review;
 
-    const {username, description, rating, lodging_id } = review;
+    function handleDeleteReview(){
+        fetch(`reviews/${id}`, {
+            method: "DELETE",
+        }).then((r) => {
+            if (r.ok) {
+              onDelete(id); 
+            }
+        })
+    }
+    function handleEditReview(){
+        console.log('edit');
+    }
+
+
     return (
-        <div className='each-review'>
-            <p>Written by: {username}</p>
+        <div className="each-review">
+            <p> {user_id}</p>
             {/* author = currentUser.username */}
+            <p> Lodge: {lodging_id} </p>
             <p>{description}</p>
             <p>Rating: {rating}</p>
-            <p> Lodge: {lodging_id} </p>
+           
 
-        <button>EDIT REVIEW</button>
-        <button>DELETE REVIEW</button>
+        {user_can_modify ? ( 
+            <div>
+              <button  onClick={handleEditReview}>EDIT REVIEW</button>
+              <button onClick={handleDeleteReview}>DELETE REVIEW</button>
+            </div>
+        ) : (null)}
+              
+ 
         </div>
     )
 }

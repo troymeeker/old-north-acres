@@ -10,14 +10,15 @@ function Lodge({ lodging}){
     return (
        
        <div className="lodge-item" >
-         <p>Lodge # {id} : {name} </p> 
-            <img src={image} className="yurt-photo" alt="" />           
+          <p>Lodge # {id} : {name} </p> 
+            <img src={image} className="yurt-photo" alt="lodge" />           
              <p>{description}</p>
              <p>Sleeps: {sleeps}</p>
              <p>Shower: {shower ? 'Yes' : 'No'}</p>  
            
-        <p>Reviews:</p>
+          <p>Reviews:</p>
           {/* <Reviews reviews={reviews} setReviews={setReviews}/>   */}
+          {/* if review.lodging_id === lodging.id render review for lodge */}
         <br/>
 
         </div>

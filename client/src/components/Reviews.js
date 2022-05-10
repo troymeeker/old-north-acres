@@ -11,14 +11,20 @@ function Reviews(){
         .then((reviews) => setReviews(reviews))
       }, [setReviews]); 
    
+      function handleReviewDelete(id){
+        const updatedReviews = reviews.filter((rev) => rev.id !== id)
+        setReviews(updatedReviews);
+    }
  
     return (
         <div>  
            {reviews.map((review) => (
               <EachReview 
+
                 key={review.id}
                 review={review}
-           
+                onDelete={handleReviewDelete}
+              
              />
            ))}
 

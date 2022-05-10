@@ -12,7 +12,7 @@ function NewReview({onNewReview, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
 
     }
-    const [username, setUserName] = useState("");
+    // const [username, setUserName] = useState("");
     const [description, setDescription] = useState("");
     const [rating, setRating] = useState("");
     const [lodging_id, setLodgingId] = useState("");
@@ -22,24 +22,24 @@ function NewReview({onNewReview, reviews, setReviews}){
         e.preventDefault();
          
         const review = {
-            username: username, 
+            // username: username, 
             description: description, 
             rating: rating, 
             lodging_id: lodging_id, 
             
         }
         onNewReview(review)
-        setUserName("")
+        // setUserName("")
         setDescription("")
         setRating("")
         setLodgingId("")
         // console.log(review);
-       
+       setReviews(review);
 
    } 
-   function handleUserNameChange(e){
-       setUserName(e.target.value)
-   }
+//    function handleUserNameChange(e){
+//        setUserName(e.target.value)
+//    }
    function handleDescriptionChange(e){
        setDescription(e.target.value)
    }
@@ -49,22 +49,24 @@ function NewReview({onNewReview, reviews, setReviews}){
     function handleLodgingChange(e){
         setLodgingId(e.target.value)
     }
+     
+ 
 
     return (
         <div className="reviews" style={themeStyles}>
            
             <h1>Reviews</h1>
          <div className="form-div">
-            <form  onSubmit={submitNewReview} className="newpost" >
+            <form  onSubmit={submitNewReview} className="newreview" >
            <h4>CREATE NEW REVIEW</h4><br/>
-             <label>Your Name </label>
+             {/* <label>Your Name </label>
              <input
                 type="text"
                 placeholder="user name"
                 id="user_name"
                 onChange={handleUserNameChange}
                 value={username}
-               /><br/>
+               /><br/> */}
              <label>Description </label>
              <textarea 
                 type="text"

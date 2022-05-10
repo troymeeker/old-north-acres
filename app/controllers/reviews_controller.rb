@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
       # only admin can edit or delete all reviews
 
       before_action :set_post, only: [:show, :update, :destroy]
-      before_action :authorized, only: [:update, :destroy]
+      before_action :is_authorized, only: [:update, :destroy]
 
       def index
         reviews = Review.all
@@ -34,6 +34,7 @@ class ReviewsController < ApplicationController
         end
       end
 
+    #   Delete /posts/:id
       def destroy
         @review.destroy
       end
