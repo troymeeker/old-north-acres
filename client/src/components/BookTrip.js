@@ -6,7 +6,7 @@ import Lodge from "./Lodge";
 // import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 
 
-function BookTrip({currentUser, reviews, setReviews}){ 
+function BookTrip(){ 
 
     const [lodgings, setLodgings] = useState([]);
 
@@ -18,11 +18,6 @@ function BookTrip({currentUser, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
     }
  
-
-             
-//    function handleClose(){
-//     setPopup(false);
-//    }
 
      useEffect(() => {
         fetch('/lodgings')
@@ -45,8 +40,7 @@ function BookTrip({currentUser, reviews, setReviews}){
                     <Lodge 
                         key={lodging.id} 
                         lodging={lodging}
-                        reviews={reviews}
-                        setReviews={setReviews}
+                       
                     />
                ))}
 

@@ -132,12 +132,22 @@
     
 } 
 .reviews{
-    height:90vh;
+    height:fit-content;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 2%;
 }
-.top-row{
+.each-review{
+    width: 500px;
+    padding: 15px;
+    margin:60px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+  }
+/* .top-row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -151,7 +161,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
+} */
 .grid-item{
     border:1px solid black;
     width: fit-content;
@@ -246,6 +256,7 @@
     width: 95%;
     margin: 8px;
   }
+  
  
 .footer{
     background-color: rgb(135,131,121);

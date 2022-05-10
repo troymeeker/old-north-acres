@@ -39,12 +39,7 @@ function App() {
        }
     })
   }, [])
-  
-  useEffect(() => {
-    fetch('/reviews')
-    .then((resp) => resp.json())
-    .then((reviews) => setReviews(reviews))
-  }, []); 
+
 
   function handleReviewAdd(review){
     
@@ -60,8 +55,6 @@ function App() {
     .then((review) => {
          setReviews([...reviews,review])
     })
-    
-
   }
  
 
@@ -72,8 +65,6 @@ function App() {
     <div>
     <ThemeContext.Provider value={darkTheme}>
      
-
-   
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} toggleTheme={toggleTheme} darkTheme={darkTheme}/>
         <div className="old-north-img"><h1 className="home-title">OLD NORTH ACRES</h1></div>
        
@@ -81,7 +72,7 @@ function App() {
         
           <Route path="/" element={<Home  />}/>
           <Route path="/about" element={<About />}/>
-          <Route path="/book" element={<BookTrip currentUser={currentUser} reviews={reviews} setReviews={setReviews}/>}/>
+          <Route path="/book" element={<BookTrip />}/>
           <Route path="/newreview" element={<NewReview onNewReview={handleReviewAdd}/>}/>
           <Route path="/contact" element={<ContactForm />}/>
       

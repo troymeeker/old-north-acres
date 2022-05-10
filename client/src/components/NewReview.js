@@ -33,6 +33,7 @@ function NewReview({onNewReview, reviews, setReviews}){
         setDescription("")
         setRating("")
         setLodgingId("")
+        // console.log(review);
        
 
    } 
@@ -94,8 +95,9 @@ function NewReview({onNewReview, reviews, setReviews}){
 
         </div>
         <div>
-             <Reviews reviews={reviews}/> 
+             
             <p>Reviews here</p>
+             <Reviews />  
         </div>
         </div>
     )

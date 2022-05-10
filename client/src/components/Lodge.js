@@ -2,7 +2,7 @@ import React from "react";
 // import Reviews from "./Reviews";
 
 
-function Lodge({ lodging, reviews, setReviews}){
+function Lodge({ lodging}){
 
 
      const {id, name, image, description, sleeps, shower} = lodging; 

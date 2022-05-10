@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
 
       # # POST /reviews
       def create
-        review = current_user.reviews.create(review)
+        review = current_user.reviews.create(review_params)
     
         if review.id
           render json: review, status: :created
@@ -41,16 +41,16 @@ class ReviewsController < ApplicationController
       private
        
       def review_params
-        params.permit(:username, :description, :rating, :lodging_id)
+        params.require(:review).permit(:username, :description, :rating, :lodging_id, :user_id)
       end
 
       def set_post
         @review = Review.find(params[:id])
       end
 
-      def authorized
+      def is_authorized
 
-        authorized = current_user.admin? || current_user.id == @review.user_id
+        is_authorized = current_user.admin? || current_user.id == @review.user_id
         render json: { error: "You are not authorized for this action" }, status: :forbidden unless is_authorized
   
       end

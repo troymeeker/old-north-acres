@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_05_192626) do
     t.string "description"
     t.string "rating"
     t.integer "lodging_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
