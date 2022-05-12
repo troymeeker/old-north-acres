@@ -15,6 +15,7 @@ function Reviews(){
       const updatedReviews = reviews.filter((rev) => rev.id !== id)
       setReviews(updatedReviews);
     }
+    
     function handleReviewEdit(updatedReview){
         const updatedReviews = reviews.map((review) => {
             if (review.id === updatedReview.id) {

@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
       t.string :rating
       t.integer :lodging_id
       t.integer :user_id
-
+      # t.string :lodge
 
       # t.timestamps
     end

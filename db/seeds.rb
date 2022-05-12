@@ -10,7 +10,7 @@ lodge3 = Lodging.create(name:'Magic School Bus', description: 'Our newest option
 book1 = Booking.create(checkin: '2023-5-09' , checkout: '2023-5-13', user_id: user1.id, lodging_id: lodge1.id)
 book2 = Booking.create(checkin:'2022-11-12', checkout: '2023-11-19', user_id: user2.id, lodging_id: lodge2.id)
 
-r1 = Review.create(username: 'admin', description: 'We had a great trip! Will be reccomending to others', rating: 'Two Thumbs Up', lodging_id: lodge1.id, user_id: user2.id)
+r1 = Review.create(username: 'admin', description: 'We had a great trip! Will be reccomending to others', lodging_id: lodge1.id,  user_id: user2.id)
 
 
 puts 'finished seeding'

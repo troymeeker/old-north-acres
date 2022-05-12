@@ -55,6 +55,9 @@
       padding:7px;
       margin-top: 9px;
   }
+   input[type="radio"]{
+       display: none;
+   }
   .old-north-img{
       height: 30vh;
       width: inherit;
@@ -146,6 +149,11 @@
     align-items: center;
     justify-content: center; */
     border: 1px solid black;
+  }
+  .item-description{
+    height: 60px;
+    width: 150px;
+    
   }
 
 .grid-item{

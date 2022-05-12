@@ -1,10 +1,15 @@
 import React, {useState} from 'react'
 import EditReviewForm from './EditReviewForm';
+import {FaStar} from 'react-icons/fa'
+// import StarRating from './StarRating';
 
-function EachReview({review, onDelete, onEdit}){
+
+function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
     const [editReview, setEditReview] = useState(false); 
-    const { id, description, rating, lodging_id, user_can_modify, user_id } = review;
-
+    // const [starRating, setStarRating] = useState(null)
+  
+    const { id, description, lodging_id, user_can_modify, user_id } = review;
+//   const ratingValue = i + 1;
 
     function toggleEdit(){
         setEditReview(!editReview)
@@ -27,19 +32,54 @@ function EachReview({review, onDelete, onEdit}){
     return (
         <div className="each-review">
             <p> Reviewer: {user_id}</p>
-            {/* author = currentUser.username */}
-            <p> Lodge: {lodging_id} </p>
-            <p>{description}</p>
-            <p>Rating: {rating}</p>
            
+            {/* <p> Lodge: {lodge} </p> */}
+            <p>id: {lodging_id}</p>
+            <p>{description}</p>
+            <p>Rating: {starRating}</p>
+                {/* <StarRating /> */}
+            <div>
+            {[...Array(5)].map((star, i)=> {
 
-        { editReview ? <EditReviewForm onEdit={handleEditReview} toggleEdit={toggleEdit} review={review} /> : null}
+                    const ratingValue = i + 1;
+
+                   return (<label  key={i}>
+                       <input 
+                        type="radio" 
+                        name="rating" 
+                        value={ratingValue} 
+                        // onClick={() => setStarRating(ratingValue)}
+                        />
+
+                       <FaStar 
+                         size={22}
+                         color={ratingValue <= ( starRating) ? "#ffc107" : "#555"}
+                        //  onMouseEnter={() => setHover(ratingValue)}
+                        //  onMouseOut={() => setHover(null)}
+                        />
+                       </label>
+                   )
+            })}
+            
+        </div>
+           
         {user_can_modify ? ( 
             <div>
-              <button  onClick={toggleEdit}>EDIT REVIEW</button>
+              <button onClick={toggleEdit}>EDIT REVIEW</button>
               <button onClick={handleDeleteReview}>DELETE REVIEW</button>
             </div>
         ) : (null)}
+
+        { editReview ? 
+            <EditReviewForm 
+              onEdit={handleEditReview} 
+              toggleEdit={toggleEdit} 
+              review={review} 
+              setStarRating={setStarRating}
+              starRating={starRating}
+            //   ratingValue={ratingValue}
+            /> : null}
+    
               
  
         </div>
