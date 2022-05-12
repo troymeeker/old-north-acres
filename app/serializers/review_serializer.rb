@@ -6,4 +6,8 @@ class ReviewSerializer < ActiveModel::Serializer
     current_user.admin? || current_user == self.object.user
   end
 
+  # def author
+  #   self.object.user
+  # end
+
 end

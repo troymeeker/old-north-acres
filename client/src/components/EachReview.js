@@ -8,7 +8,7 @@ function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
     const [editReview, setEditReview] = useState(false); 
     // const [starRating, setStarRating] = useState(null)
   
-    const { id, description, lodging_id, user_can_modify, user_id } = review;
+    const { id, description, lodging_id, user_can_modify, user_id} = review;
 //   const ratingValue = i + 1;
 
     function toggleEdit(){

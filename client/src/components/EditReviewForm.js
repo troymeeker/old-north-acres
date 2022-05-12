@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {FaStar} from 'react-icons/fa'
 
 
-function EditReviewForm({onEdit, review, toggleEdit, starRating, ratingValue}){
+function EditReviewForm({onEdit, review, toggleEdit, starRating}){
         const {id, description  } = review;
         const [updatedRating, setUpdatedRating] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);

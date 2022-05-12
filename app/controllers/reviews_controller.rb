@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
         review = current_user.reviews.create(review_params)
     
         if review.id
-          render json: review,  status: :created
+          render json: review, include: :users, status: :created
         else
           render json:{ error: review.errors.full_messages.to_sentence}, status: :unprocessable_entity
         end
@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
       private
        
       def review_params
-        params.permit(:username, :description, :rating, :lodging_id, :user_id)
+        params.permit(:username, :description, :rating, :lodging_id, :user_id, :author)
       end
 
       def set_post
