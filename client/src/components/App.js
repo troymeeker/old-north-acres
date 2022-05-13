@@ -73,7 +73,7 @@ function App() {
           <Route path="/" element={<Home  />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/book" element={<BookTrip />}/>
-          <Route path="/newreview" element={<NewReview onNewReview={handleReviewAdd}/>}/>
+          <Route path="/newreview" element={<NewReview onAddReview={handleReviewAdd}/>}/>
           <Route path="/contact" element={<ContactForm />}/>
       
 

@@ -1,11 +1,13 @@
 import React, {useContext, useState} from "react";
+import {useNavigate} from 'react-router-dom';
 import { ThemeContext } from "./App";
-import Reviews from "./Reviews";
+// import Reviews from "./Reviews";
 
 import StarRating from "./StarRating";
 
-function NewReview({onNewReview, reviews, setReviews}){
-
+function NewReview({onAddReview, reviews, setReviews}){
+    const navigate = useNavigate();
+  
     const darkTheme = useContext(ThemeContext)
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
@@ -13,47 +15,36 @@ function NewReview({onNewReview, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
 
     }
-    const [firstName, setFirstName] = useState("");
+    // const [firstName, setFirstName] = useState("");
     const [description, setDescription] = useState("");
-    const [rating, setRating] = useState(null);
-    // const [lodge, setLodge] = useState("");
+    
     const [lodging_id, setLodgingId] = useState('')
-    // const ratingValue = i + 1;
+    const [starRating, setStarRating] = useState(null);
+  
 
     function submitNewReview(e){
         e.preventDefault();
          
         const review = {
-            firstName: firstName, 
+          
             description: description, 
-            rating: rating, 
-            // lodge: lodge, 
-            lodging_id: lodging_id
-            
+           
+            lodging_id: lodging_id,
+            starRating: starRating
         }
-        onNewReview(review)
-        setFirstName("")
+        onAddReview(review)
+        // setFirstName("")
         setDescription("")
-        setRating(null)
+        setStarRating(null)
         setLodgingId("")
-        // setLodge('')
-        // console.log(review);
-       
+        navigate('/book');
 
    } 
-   function handleFirstNameChange(e){
-       setFirstName(e.target.value)
-   }
+ 
    function handleDescriptionChange(e){
        setDescription(e.target.value)
-       
    }
-    //  function handleRatingChange(e){
-    //     setRating(e.target.value)
-    //   }
-    // function handleLodgeChange(e){
-    //     setLodge(e.target.value)
-    // }
+  
     function handleLodgingChange(e){
         setLodgingId(e.target.value)
     }
@@ -67,14 +58,7 @@ function NewReview({onNewReview, reviews, setReviews}){
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
            <h4>CREATE NEW REVIEW</h4><br/>
-             <label>Your Name </label>
-             <input
-                type="text"
-                placeholder="first name"
-                id="user_name"
-                onChange={handleFirstNameChange}
-                value={firstName}
-               /><br/>
+            
              <label>Description </label>
              <textarea 
                 type="text"
@@ -87,16 +71,9 @@ function NewReview({onNewReview, reviews, setReviews}){
                /><br/>
               
                 <label>How was your stay? </label>
-                  <StarRating  />
+                  <StarRating setStarRating={setStarRating} starRating={starRating}/>
                   <br/>
-             {/* <select onChange={handleRatingChange} >
-                 <option value=''>Select One</option>
-                 <option value='1'>Gold Star</option>
-                 <option value='2'>Blue Ribbon</option>
-                 <option value='3'>Two Thumbs Up</option>
-                 <option value='4'>5 Stars</option>
-                 
-             </select><br/> */}
+             
              <label>Lodge </label> 
              <select  onChange={handleLodgingChange}>
                  <option id="lodging_id" value=''>Select One</option>
@@ -109,11 +86,7 @@ function NewReview({onNewReview, reviews, setReviews}){
             </form>
 
         </div>
-        <div>
-             
-            <p>Reviews here</p>
-             <Reviews />  
-        </div>
+       
         </div>
     )
 }

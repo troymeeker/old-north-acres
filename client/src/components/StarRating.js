@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {FaStar} from 'react-icons/fa'
 
-function StarRating(){
-    const [starRating, setStarRating] = useState(null);
+function StarRating({   starRating, setStarRating}){
+    
     // const [hover, setHover] = useState(null); 
     return (
         <div>
@@ -15,7 +15,8 @@ function StarRating(){
                         type="radio" 
                         name="rating" 
                         value={ratingValue} 
-                        onClick={() => setStarRating(ratingValue)}
+                        onChange = {(e) => setStarRating(e.target.value)}
+                     
                         />
 
                        <FaStar 

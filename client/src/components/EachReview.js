@@ -6,10 +6,10 @@ import {FaStar} from 'react-icons/fa'
 
 function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
     const [editReview, setEditReview] = useState(false); 
-    // const [starRating, setStarRating] = useState(null)
+    
   
     const { id, description, lodging_id, user_can_modify, user_id} = review;
-//   const ratingValue = i + 1;
+
 
     function toggleEdit(){
         setEditReview(!editReview)
@@ -31,15 +31,13 @@ function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
 
     return (
         <div className="each-review">
-            <p> Reviewer: {user_id}</p>
-           
-            {/* <p> Lodge: {lodge} </p> */}
-            <p>id: {lodging_id}</p>
+            <p> Reviewer:  {user_id}</p>
+            <p>lodging_id: {lodging_id}</p>
             <p>{description}</p>
-            <p>Rating: {starRating}</p>
-                {/* <StarRating /> */}
+            <p>Rating: </p>
+               
             <div>
-            {[...Array(5)].map((star, i)=> {
+            {[...Array(5)].map((star, i) => {
 
                     const ratingValue = i + 1;
 
@@ -48,12 +46,12 @@ function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
                         type="radio" 
                         name="rating" 
                         value={ratingValue} 
-                        // onClick={() => setStarRating(ratingValue)}
+                        // onClick={(e) => setStarRating(ratingValue)}
                         />
 
                        <FaStar 
                          size={22}
-                         color={ratingValue <= ( starRating) ? "#ffc107" : "#555"}
+                         color={ratingValue <= (starRating) ? "#ffc107" : "#555"}
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
                         />
@@ -77,7 +75,7 @@ function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
               review={review} 
               setStarRating={setStarRating}
               starRating={starRating}
-            //   ratingValue={ratingValue}
+           
             /> : null}
     
               

@@ -20,15 +20,13 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
             },
             body: JSON.stringify({ 
                 description: updatedDescription,
-                // rating: updatedRating
-                
+                // starRating: updatedRating
             }),
         })
         .then((r) => r.json())
         .then((updatedReview) => {
             onEdit(updatedReview)
         });
-       
     }
    
  
@@ -46,10 +44,10 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
 
              return(<label key={i}>
                        <input 
-                        type="radio" 
-                        name="rating" 
-                        value={updatedRating} 
-                        onChange={() => setUpdatedRating(updatedRating)}
+                            type="radio" 
+                            name="rating" 
+                            value={ratingValue}
+                            onChange={() => setUpdatedRating(updatedRating)}
                         />
 
                        <FaStar 
@@ -58,11 +56,10 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
                         />
-            </label>)
+                 </label>)
             })}
             </div>
-            
-            
+                        
             <button type="submit" onClick={handleFormSubmit}> Confirm Edit</button>
         </form>            
     </div>

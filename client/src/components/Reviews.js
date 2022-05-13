@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
+
 import EachReview from './EachReview';
 
 function Reviews(){
-    
+
+  const [starRating, setStarRating] = useState(null)
   const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -12,10 +14,10 @@ function Reviews(){
       }, [setReviews]); 
    
     function handleReviewDelete(id){
-      const updatedReviews = reviews.filter((rev) => rev.id !== id)
+      const updatedReviews = reviews.filter((review) => review.id !== id)
       setReviews(updatedReviews);
     }
-    
+
     function handleReviewEdit(updatedReview){
         const updatedReviews = reviews.map((review) => {
             if (review.id === updatedReview.id) {
@@ -25,8 +27,10 @@ function Reviews(){
             }
         })
         setReviews(updatedReviews)
-
+       
     }
+
+   
  
     return (
         <div>  
@@ -37,9 +41,12 @@ function Reviews(){
                 review={review}
                 onDelete={handleReviewDelete}
                 onEdit={handleReviewEdit}
-              
+                starRating={starRating}
+                setStarRating={setStarRating}
              />
            ))}
+          
+           {/* <button  onClick={navToLodges}> See all Reviews</button>  */}
 
            </div>
     )

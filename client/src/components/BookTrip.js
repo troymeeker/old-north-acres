@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from "react";
 import { ThemeContext } from "./App";
-
+import Reviews from "./Reviews";
 import Lodge from "./Lodge";
 
 // import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
@@ -43,6 +43,11 @@ function BookTrip(){
                        
                     />
                ))}
+                 <div>
+           
+           <p>Reviews here</p>
+            <Reviews />  
+         </div>
 
               </div>
                   

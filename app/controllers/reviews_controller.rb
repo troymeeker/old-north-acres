@@ -25,6 +25,7 @@ class ReviewsController < ApplicationController
         end
       end
 
+       # # PATCH /reviews/:id
       def update
         if @review 
             @review.update(review_params)
@@ -42,7 +43,7 @@ class ReviewsController < ApplicationController
       private
        
       def review_params
-        params.permit(:username, :description, :rating, :lodging_id, :user_id, :author)
+        params.permit( :description, :rating, :lodging_id, :user_id)
       end
 
       def set_post

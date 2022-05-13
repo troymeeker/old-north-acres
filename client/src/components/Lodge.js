@@ -1,5 +1,5 @@
 import React from "react";
-// import Reviews from "./Reviews";
+
 
 
 function Lodge({ lodging}){
@@ -16,9 +16,9 @@ function Lodge({ lodging}){
              <p>Sleeps: {sleeps}</p>
              <p>Shower: {shower ? 'Yes' : 'No'}</p>  
            
-          <p>Reviews:</p>
-          {/* <Reviews reviews={reviews} setReviews={setReviews}/>   */}
-          {/* if review.lodging_id === lodging.id render review for lodge */}
+        
+         
+         
         <br/>
 
         </div>
