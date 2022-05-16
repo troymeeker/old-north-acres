@@ -6,6 +6,7 @@ class CreateLodgings < ActiveRecord::Migration[7.0]
       t.string :image
       t.integer :sleeps
       t.boolean :shower
+      # t.string :review
 
      
     end

@@ -4,11 +4,11 @@ import {FaStar} from 'react-icons/fa'
 // import StarRating from './StarRating';
 
 
-function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
+function EachReview({review, onDelete, onEdit, setStarRating}){
     const [editReview, setEditReview] = useState(false); 
     
   
-    const { id, description, lodging_id, user_can_modify, user_id} = review;
+    const { id, description, lodging_id, user_can_modify, user_id, starRating} = review;
 
 
     function toggleEdit(){
@@ -46,7 +46,7 @@ function EachReview({review, onDelete, onEdit, starRating, setStarRating}){
                         type="radio" 
                         name="rating" 
                         value={ratingValue} 
-                        // onClick={(e) => setStarRating(ratingValue)}
+                        // onClick={() => setStarRating(ratingValue)}
                         />
 
                        <FaStar 

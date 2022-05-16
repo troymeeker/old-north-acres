@@ -1,6 +1,6 @@
 class ReviewSerializer < ActiveModel::Serializer
 
-  attributes :id, :description, :rating, :lodging_id, :user_can_modify, :user_id
+  attributes :id, :description, :lodging_id, :user_can_modify, :user_id, :starRating
 
   def user_can_modify
     current_user.admin? || current_user == self.object.user

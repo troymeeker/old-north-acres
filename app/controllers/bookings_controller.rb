@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   end
 
   
-
+# create new booking
  
 
   private

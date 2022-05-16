@@ -3,7 +3,7 @@ class LodgingsController < ApplicationController
          # GET /lodgings
   def index
 
-    lodgings = Lodging.all
+    lodgings = Lodging.all 
     render json: lodgings
   end
 

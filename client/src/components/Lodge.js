@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 function Lodge({ lodging}){
 
 
@@ -15,6 +13,7 @@ function Lodge({ lodging}){
              <p>{description}</p>
              <p>Sleeps: {sleeps}</p>
              <p>Shower: {shower ? 'Yes' : 'No'}</p>  
+             <p>Review: </p>
            
         
          
