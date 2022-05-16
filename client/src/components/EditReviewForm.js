@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import {FaStar} from 'react-icons/fa'
 
 
-function EditReviewForm({onEdit, review, toggleEdit, starRating}){
+function EditReviewForm({onEdit, review, toggleEdit, starRating, setStarRating}){
         const {id, description  } = review;
-        const [updatedRating, setUpdatedRating] = useState(starRating);
+         const [updatedRating, setUpdatedRating] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);
 
     
@@ -20,7 +20,7 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
             },
             body: JSON.stringify({ 
                 description: updatedDescription,
-                // starRating: updatedRating
+                starRating: updatedRating
             }),
         })
         .then((r) => r.json())
@@ -47,7 +47,7 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
                             type="radio" 
                             name="rating" 
                             value={ratingValue}
-                            onChange={() => setUpdatedRating(updatedRating)}
+                            onChange={() => setStarRating(ratingValue)}
                         />
 
                        <FaStar 
@@ -56,10 +56,11 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating}){
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
                         />
-                 </label>)
+            </label>)
             })}
             </div>
-                        
+            
+            
             <button type="submit" onClick={handleFormSubmit}> Confirm Edit</button>
         </form>            
     </div>
