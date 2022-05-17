@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import {FaStar} from 'react-icons/fa'
 
 
-function EditReviewForm({onEdit, review, toggleEdit, starRating, setStarRating}){
-        const {id, description  } = review;
-         const [updatedRating, setUpdatedRating] = useState(starRating);
+function EditReviewForm({onEdit, review, toggleEdit}){
+        const {id, description, starRating  } = review;
+        const [updatedRating, setUpdatedRating] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);
 
     
@@ -47,7 +47,7 @@ function EditReviewForm({onEdit, review, toggleEdit, starRating, setStarRating})
                             type="radio" 
                             name="rating" 
                             value={ratingValue}
-                            onChange={() => setStarRating(ratingValue)}
+                            onClick={() => setUpdatedRating(ratingValue)}
                         />
 
                        <FaStar 
