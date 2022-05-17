@@ -1,9 +1,7 @@
 import React, {useState, useContext, useEffect} from "react";
 import { ThemeContext } from "./App";
-import Reviews from "./Reviews";
-import Lodge from "./Lodge";
 
-// import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
+import Lodge from "./Lodge";
 
 
 function BookTrip(){ 
@@ -33,7 +31,7 @@ function BookTrip(){
             {/* <p>Form or calendar here to select trip and display trips for current user</p>  */}
              <p>Click on one of our options to read reviews from each lodge! </p><br/>
                
-              {/* <OutsideClickHandler onOutsideClick={() => setPopup(false)}>   */}
+             
               <div> 
 
                {lodgings.map((lodging) => (
@@ -45,8 +43,7 @@ function BookTrip(){
                ))}
                  <div>
            
-           <p>Reviews here</p>
-            <Reviews />  
+          
          </div>
 
               </div>

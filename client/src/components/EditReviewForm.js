@@ -6,6 +6,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
         const {id, description, starRating  } = review;
         const [updatedRating, setUpdatedRating] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);
+        const [hover, setHover] = useState(null)
 
     
     function handleFormSubmit(e){
@@ -51,10 +52,10 @@ function EditReviewForm({onEdit, review, toggleEdit}){
                         />
 
                        <FaStar 
-                         size={22}
-                         color={ratingValue <= ( starRating) ? "#ffc107" : "#555"}
-                        //  onMouseEnter={() => setHover(ratingValue)}
-                        //  onMouseOut={() => setHover(null)}
+                         size={30}
+                         color={ratingValue <= (hover || starRating) ? "#ffc107" : "#555"}
+                          onMouseEnter={() => setHover(ratingValue)}
+                          onMouseOut={() => setHover(null)}
                         />
             </label>)
             })}

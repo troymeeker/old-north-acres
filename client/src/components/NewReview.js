@@ -15,7 +15,7 @@ function NewReview({onAddReview, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
 
     }
-    // const [firstName, setFirstName] = useState("");
+  
     const [description, setDescription] = useState("");
     
     const [lodging_id, setLodgingId] = useState('')
@@ -33,7 +33,7 @@ function NewReview({onAddReview, reviews, setReviews}){
             starRating: starRating
         }
         onAddReview(review)
-        // setFirstName("")
+       
         setDescription("")
         setStarRating(null)
         setLodgingId("")

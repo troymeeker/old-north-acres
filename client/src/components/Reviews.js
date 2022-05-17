@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 import EachReview from './EachReview';
 
-function Reviews(){
+function Reviews({lodging}){
 
   const [starRating, setStarRating] = useState(null)
   const [reviews, setReviews] = useState([]);
@@ -43,6 +43,7 @@ function Reviews(){
                 onEdit={handleReviewEdit}
                 starRating={starRating}
                 setStarRating={setStarRating}
+                lodging={lodging}
              />
            ))}
           

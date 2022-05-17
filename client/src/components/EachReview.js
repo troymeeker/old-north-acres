@@ -4,11 +4,12 @@ import {FaStar} from 'react-icons/fa'
 // import StarRating from './StarRating';
 
 
-function EachReview({review, onDelete, onEdit, setStarRating}){
+function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
     const [editReview, setEditReview] = useState(false); 
     
   
-    const { id, description, lodging_id, user_can_modify, user_id, starRating} = review;
+    const { id, description, user_can_modify, user_id, starRating} = review;
+    const {name } = lodging;
 
 
     function toggleEdit(){
@@ -32,7 +33,7 @@ function EachReview({review, onDelete, onEdit, setStarRating}){
     return (
         <div className="each-review">
             <p> Reviewer:  {user_id}</p>
-            <p>lodging_id: {lodging_id}</p>
+            <p>lodging name: {name}</p>
             <p>{description}</p>
             <p>Rating: </p>
                
@@ -50,7 +51,7 @@ function EachReview({review, onDelete, onEdit, setStarRating}){
                         />
 
                        <FaStar 
-                         size={22}
+                         size={30}
                          color={ratingValue <= (starRating) ? "#ffc107" : "#555"}
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
