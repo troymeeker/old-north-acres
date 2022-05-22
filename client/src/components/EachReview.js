@@ -3,13 +3,10 @@ import EditReviewForm from './EditReviewForm';
 import {FaStar} from 'react-icons/fa'
 // import StarRating from './StarRating';
 
-
 function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
     const [editReview, setEditReview] = useState(false); 
-    
-  
     const { id, description, user_can_modify, user_id, starRating} = review;
-    const {name } = lodging;
+    const { name } = lodging;
 
 
     function toggleEdit(){
@@ -29,8 +26,9 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
        onEdit(updatedReview);
     }
 
-
     return (
+    //   if (review.lodging_id === lodging_id.id){}
+        
         <div className="each-review">
             <p> Reviewer:  {user_id}</p>
             <p>lodging name: {name}</p>
@@ -52,16 +50,15 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
 
                        <FaStar 
                          size={30}
-                         color={ratingValue <= (starRating) ? "#ffc107" : "#555"}
+                         color={ratingValue <= (starRating) ? "#ffc107" : "#777"}
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
                         />
                        </label>
-                   )
-            })}
+                 )
+            })} 
             
         </div>
-           
         {user_can_modify ? ( 
             <div>
               <button onClick={toggleEdit}>EDIT REVIEW</button>
@@ -76,13 +73,10 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
               review={review} 
               setStarRating={setStarRating}
               starRating={starRating}
-           
             /> : null}
     
-              
- 
         </div>
-    )
+     )
 }
 
 export default EachReview;

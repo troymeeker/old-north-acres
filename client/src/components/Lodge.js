@@ -15,10 +15,10 @@ function Lodge({ lodging}){
              <p>Sleeps: {sleeps}</p>
              <p>Shower: {shower ? 'Yes' : 'No'}</p>  
             
-             <p>Reviews here</p>
+             <p>Reviews here:</p>
+           
             <Reviews lodging={lodging}/>  
         
-         
          
         <br/>
 

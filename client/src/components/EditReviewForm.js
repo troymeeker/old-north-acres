@@ -6,7 +6,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
         const {id, description, starRating  } = review;
         const [updatedRating, setUpdatedRating] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);
-        const [hover, setHover] = useState(null)
+        // const [hover, setHover] = useState(null)
 
     
     function handleFormSubmit(e){
@@ -35,8 +35,8 @@ function EditReviewForm({onEdit, review, toggleEdit}){
     <div >
                         
         <form >
-            <label>Edit Description</label>
-            <input className="description-field" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></input><br/>
+            <label>Edit Description</label><br/>
+            <textarea className="description-field" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></textarea><br/>
              <label>Edit Rating</label> 
              <div>
             {[...Array(5)].map((star, i) => {
@@ -48,14 +48,14 @@ function EditReviewForm({onEdit, review, toggleEdit}){
                             type="radio" 
                             name="rating" 
                             value={ratingValue}
-                            onClick={() => setUpdatedRating(ratingValue)}
+                            onChange = {(e) => setUpdatedRating(e.target.value)}
                         />
 
                        <FaStar 
                          size={30}
-                         color={ratingValue <= (hover || starRating) ? "#ffc107" : "#555"}
-                          onMouseEnter={() => setHover(ratingValue)}
-                          onMouseOut={() => setHover(null)}
+                         color={ratingValue <= ( starRating) ? "#ffc107" : "#777"}
+                        //   onMouseEnter={() => setHover(ratingValue)}
+                        //   onMouseOut={() => setHover(null)}
                         />
             </label>)
             })}

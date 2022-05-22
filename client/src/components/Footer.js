@@ -21,7 +21,7 @@ function Footer(){
             </div>
            
           
-               <h5>@ Copyright 2022</h5>
+               {/* <h5 className='copyright'>@ Copyright 2022</h5> */}
           
             
         </footer>

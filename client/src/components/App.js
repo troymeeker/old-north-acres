@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import Unauth from "./Unauth";
 import instalogo from "../images/insta.png"
 
-  export const ThemeContext = React.createContext();
+export const ThemeContext = React.createContext();
 
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
        
       <Routes> 
         
-          <Route path="/" element={<Home  />}/>
+          <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/book" element={<BookTrip />}/>
           <Route path="/newreview" element={<NewReview onAddReview={handleReviewAdd}/>}/>

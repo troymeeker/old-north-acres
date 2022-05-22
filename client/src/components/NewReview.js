@@ -15,7 +15,7 @@ function NewReview({onAddReview, reviews, setReviews}){
         color: darkTheme ? '#CCC' : '#333'
 
     }
-  
+    // const [firstName, setFirstName] = useState("");
     const [description, setDescription] = useState("");
     
     const [lodging_id, setLodgingId] = useState('')
@@ -28,12 +28,11 @@ function NewReview({onAddReview, reviews, setReviews}){
         const review = {
           
             description: description, 
-           
             lodging_id: lodging_id,
             starRating: starRating
         }
         onAddReview(review)
-       
+        // setFirstName("")
         setDescription("")
         setStarRating(null)
         setLodgingId("")
@@ -57,9 +56,12 @@ function NewReview({onAddReview, reviews, setReviews}){
             <h1>Reviews</h1>
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
-           <h4>CREATE NEW REVIEW</h4><br/>
+           <h4>TELL US ABOUT YOUR STAY!</h4>
+             <label>How was your stay with us?</label>
+             <StarRating setStarRating={setStarRating} starRating={starRating}/>
             
-             <label>Description </label>
+            
+             <label>Description </label><br/>
              <textarea 
                 type="text"
                 placeholder="description"
@@ -68,12 +70,9 @@ function NewReview({onAddReview, reviews, setReviews}){
                 onChange={handleDescriptionChange}
                 value={description}
                 
-               /><br/>
-              
-                <label>How was your stay? </label>
-                  <StarRating setStarRating={setStarRating} starRating={starRating}/>
-                  <br/>
-             
+            />
+               <br/>
+                
              <label>Lodge </label> 
              <select  onChange={handleLodgingChange}>
                  <option id="lodging_id" value=''>Select One</option>

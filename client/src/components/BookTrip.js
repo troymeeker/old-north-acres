@@ -29,7 +29,6 @@ function BookTrip(){
             <h2>Learn about our Lodging options</h2>
           
             {/* <p>Form or calendar here to select trip and display trips for current user</p>  */}
-             <p>Click on one of our options to read reviews from each lodge! </p><br/>
                
              
               <div> 
@@ -41,13 +40,8 @@ function BookTrip(){
                        
                     />
                ))}
-                 <div>
            
-          
-         </div>
-
-              </div>
-                  
+            </div>       
         
          </div> 
     );
