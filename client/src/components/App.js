@@ -15,15 +15,19 @@ export const ThemeContext = React.createContext();
 
 
 function App() {
+  // const storedDarkTheme = localStorage.getItem("DARK");
 
   const [currentUser, setCurrentUser] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(localStorage.getItem("DARK") === 'true' );
   const [reviews, setReviews] = useState([]);
 
   function toggleTheme(){
     setDarkTheme((darkTheme) => !darkTheme)
   }
+  useEffect(() => {
+   localStorage.setItem("DARK", darkTheme);
+  }, [darkTheme]);
 
   useEffect(() => {
     fetch("/me")

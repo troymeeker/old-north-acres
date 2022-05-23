@@ -37,28 +37,29 @@ function EditReviewForm({onEdit, review, toggleEdit}){
         <form >
             <label>Edit Description</label><br/>
             <textarea className="description-field" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></textarea><br/>
+           
              <label>Edit Rating</label> 
              <div>
-            {[...Array(5)].map((star, i) => {
+              {[...Array(5)].map((star, i) => {
 
-                    const ratingValue = i + 1;
+                    const updatedRating = i + 1;
 
-             return(<label key={i}>
+               return(<label key={i}>
                        <input 
                             type="radio" 
                             name="rating" 
-                            value={ratingValue}
-                            onChange = {(e) => setUpdatedRating(e.target.value)}
+                            value={updatedRating}
+                            onClick = {(e) => setUpdatedRating(e.target.value)}
                         />
 
                        <FaStar 
                          size={30}
-                         color={ratingValue <= ( starRating) ? "#ffc107" : "#777"}
+                         color={updatedRating <= ( starRating) ? "#ffc107" : "#777"}
                         //   onMouseEnter={() => setHover(ratingValue)}
                         //   onMouseOut={() => setHover(null)}
                         />
-            </label>)
-            })}
+               </label>)
+              })}
             </div>
             
             

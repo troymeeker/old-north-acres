@@ -21,7 +21,7 @@ function StarRating({   starRating, setStarRating}){
 
                        <FaStar 
                          size={30}
-                         color={ratingValue <= ( starRating) ? "#ffc107" : "#777"}
+                         color={ratingValue <= ( starRating ) ? "#ffc107" : "#777"}
                         //  onMouseEnter={() => setHover(ratingValue)}
                         //  onMouseOut={() => setHover(null)}
                         />

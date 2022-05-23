@@ -12,7 +12,7 @@ function NewReview({onAddReview, reviews, setReviews}){
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
        
-        color: darkTheme ? '#CCC' : '#333'
+        color: darkTheme ? '#222' : '#333'
 
     }
     // const [firstName, setFirstName] = useState("");
@@ -75,10 +75,10 @@ function NewReview({onAddReview, reviews, setReviews}){
                 
              <label>Lodge </label> 
              <select  onChange={handleLodgingChange}>
-                 <option id="lodging_id" value=''>Select One</option>
-                 <option id="lodging_id" value='1'>Yurt</option>
-                 <option id="lodging_id" value='2'>Cabin</option>
-                 <option id="lodging_id" value='3'>School Bus</option>
+                 <option id="lodging_id" value={0}>Select One</option>
+                 <option id="lodging_id" value={1}>Yurt</option>
+                 <option id="lodging_id" value={2}>Cabin</option>
+                 <option id="lodging_id" value={3}>School Bus</option>
                
              </select><br/>
              <button className="add-btn">ADD REVIEW</button>
