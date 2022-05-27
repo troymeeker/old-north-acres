@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import { ThemeContext } from './App';
-
 import emailjs from 'emailjs-com';
 
 function ContactForm(){
@@ -22,8 +21,9 @@ function ContactForm(){
     function handleOnSubmit(e){
         e.preventDefault();
         
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID,   
-        e.target, USER_ID)
+        emailjs.sendForm(
+            SERVICE_ID, TEMPLATE_ID, e.target, USER_ID
+        )
             .then((result) => {
                 alert(result.text);
                 //render success message not alert
@@ -35,62 +35,59 @@ function ContactForm(){
             e.target.reset();
         }
 
-    
-
-    return(
+    return (
+        <div style={themeStyles}>
+            <form onSubmit={handleOnSubmit} className="form" style={formStyles}>
         
-        <div className='contact' style={themeStyles}>
-           
-         <form onSubmit={handleOnSubmit} className="form" style={formStyles}>
-            <h3>Contact us for more information!</h3> 
-           
+             <h3>Contact us for more information!</h3> 
+       
+                <input
+                    label=' Name'
+                    type="text"
+                    name='name'
+                    placeholder='Name'
+                    required
+                    className='form-input'
+                    tabIndex="1"
+                
+                />
+                <br/>
+            
+                <input 
+                    label='Email'
+                    type="text"
+                    name='user_email'
+                    placeholder='Email Address'
+                    required
+                    className='form-input'
+                    tabIndex="2"
+                
+                
+                /><br/>
             <input
-                label=' Name'
-                type="text"
-                name='name'
-                placeholder='Name'
-                required
-                className='form-input'
-                tabIndex="1"
-              
+                    label="subject"
+                    name='subject'
+                    placeholder='Subject'
+                    className='form-input'
+                    tabIndex="3"
+                
             />
             <br/>
-           
-            <input 
-                label='Email'
-                type="text"
-                name='user_email'
-                placeholder='Email Address'
-                required
-                className='form-input'
-                tabIndex="2"
-              
-             
-            /><br/>
-           <input
-                label="subject"
-                name='subject'
-                placeholder='Subject'
-                className='form-input'
-                tabIndex="3"
-               
-           />
-          <br/>
-          <textarea
-                label='Message'
-                placeholder='Message...'
-                className='form-message'
-                name='message'
-                required
-                tabIndex="4"
-          />
-           <br/>
-       
-        <button type='submit' className='submit-button'>Submit</button>
-      </form> 
- 
-      </div>)
-    
+            <textarea
+                    label='Message'
+                    placeholder='Message...'
+                    className='form-message'
+                    name='message'
+                    required
+                    tabIndex="4"
+            />
+            <br/>
+        
+            <button type='submit' className='submit-button'>Submit</button>
+        
+            </form>  
+        </div>
+    )
 
 }
 

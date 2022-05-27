@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Navbar from "./NavBar";
-import ContactForm from "./ContactForm";
+import Contact from "./Contact";
 import BookTrip from "./BookTrip";
 import NewReview from "./NewReview";
 import Footer from "./Footer";
@@ -78,7 +78,7 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/book" element={<BookTrip />}/>
           <Route path="/newreview" element={<NewReview onAddReview={handleReviewAdd}/>}/>
-          <Route path="/contact" element={<ContactForm />}/>
+          <Route path="/contact" element={<Contact />}/>
       
 
       </Routes>

@@ -24,8 +24,8 @@ function Home(){
               our pet friendly lodging options offer a back-to-nature feel without sacrificing any necessities
               — on second thought, they are downright luxurious.
           </p>  
-           <img src={sheeple} alt="sheep fam" className="img-home"/> 
-          <p className="home-text"> We strive to create an enjoyable stay, no matter where you choose to stay, While you visit Old North Acres you can choose to meet our sheep and dogs, hike on the trails near each lodge, use our canoe, or just relax by a fire. Read our reviews to learn more about our lodging options, or use the Contact page to ask us any questions you may have!</p>
+           <img src={sheeple} alt="sheep fam" className="sheeple"/> 
+          <p className="home-text"> We strive to create an enjoyable stay, no matter where you choose to stay, While you visit Old North Acres you can choose to meet our sheep and dogs, hike on the trails near each lodge, use our canoe, or just relax by a fire. Read our reviews to learn more about our lodging options, give us a follow on Instagram, & use the Contact page to ask us any questions you may have!</p>
         
        
         </div>
