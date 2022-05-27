@@ -28,15 +28,17 @@ function NewReview({onAddReview, reviews, setReviews}){
         const review = {
           
             description: description, 
-            lodging_id: lodging_id,
-            starRating: starRating
+            starRating: starRating,
+            lodging_id: lodging_id
+
         }
         onAddReview(review)
-        // setFirstName("")
+     
         setDescription("")
         setStarRating(null)
         setLodgingId("")
         navigate('/book');
+        // console.log(review);
 
    } 
  
@@ -48,15 +50,13 @@ function NewReview({onAddReview, reviews, setReviews}){
         setLodgingId(e.target.value)
     }
      
- 
-
-    return (
+     return (
         <div className="reviews" style={themeStyles}>
            
-            <h1>Reviews</h1>
+            <h1>Tell us about your stay!</h1>
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
-           <h4>TELL US ABOUT YOUR STAY!</h4>
+              {/* <h4>TELL US ABOUT YOUR STAY!</h4> */}
              <label>How was your stay with us?</label>
              <StarRating setStarRating={setStarRating} starRating={starRating}/>
             
@@ -73,12 +73,12 @@ function NewReview({onAddReview, reviews, setReviews}){
             />
                <br/>
                 
-             <label>Lodge </label> 
-             <select  onChange={handleLodgingChange}>
-                 <option id="lodging_id" value={0}>Select One</option>
-                 <option id="lodging_id" value={1}>Yurt</option>
-                 <option id="lodging_id" value={2}>Cabin</option>
-                 <option id="lodging_id" value={3}>School Bus</option>
+             <label>Where did you stay? </label> 
+             <select  onChange={handleLodgingChange} >
+                 <option id="lodging_id" value=''>Select One</option>
+                 <option id="lodging_id" value='1'>Yurt</option>
+                 <option id="lodging_id" value='2'>Cabin</option>
+                 <option id="lodging_id" value='3'>School Bus</option>
                
              </select><br/>
              <button className="add-btn">ADD REVIEW</button>

@@ -27,7 +27,7 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
     }
 
     return (
-    //   if (review.lodging_id === lodging_id.id){}
+    //    if (review.lodging_id == lodging.id){}
         
         <div className="each-review">
             <p> Reviewer:  {user_id}</p>
@@ -76,6 +76,7 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
             /> : null}
     
         </div>
+    
      )
 }
 

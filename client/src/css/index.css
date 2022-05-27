@@ -10,9 +10,9 @@
     
 }
 .home{
-    height: 90vh;
+    height: fit-content;
     background-color: rgb(160,175,135);
-    padding: 2%;
+    padding: 1%;
     width: inherit;
     text-align: center;
 }
@@ -200,12 +200,22 @@
     background-size: cover; 
    
 }
+.img-home{
+    height: 340px;
+    width: 460px; 
+    background-position: center;
+    background-size: cover; 
+    /* display: flex; */
+    
+   
+}
 
 .contact{
     height:80vh;
     text-align: center;
     background-color: rgb(160,175,135);
     padding: 15px;
+  
 }
 
 .unauthpage{

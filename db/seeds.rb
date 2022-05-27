@@ -8,7 +8,7 @@ user1 = User.create(username: 'user', password:'user')
 user2 = User.create(username: 'admin', password:'admin', admin: true)
 
 
-rev1 = Review.create( description: 'We had a great trip! Will be reccomending to others', starRating: 3, lodging_id: lodge1.id, user_id: user1.id )
+rev1 = Review.create( description: 'We had a great trip to the YURT! Will be reccomending to others', starRating: 3, lodging_id: lodge1.id, user_id: user1.id )
 # rev2 = Review.create( description: 'review description test', starRating: 4, lodging_id: lodge2.id, user_id: user1.id)
 # rev3 = Review.create( description: 'review 3 description test', starRating: 5, lodging_id: lodge3.id, user_id: user2.id)
 

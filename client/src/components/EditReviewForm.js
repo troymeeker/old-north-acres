@@ -26,7 +26,10 @@ function EditReviewForm({onEdit, review, toggleEdit}){
         })
         .then((r) => r.json())
         .then((updatedReview) => {
+            // debugger
+            // alert('Your change has been noted, Press ok to see change reflected')
             onEdit(updatedReview)
+
         });
     }
    
@@ -48,13 +51,20 @@ function EditReviewForm({onEdit, review, toggleEdit}){
                        <input 
                             type="radio" 
                             name="rating" 
-                            value={updatedRating}
-                            onClick = {(e) => setUpdatedRating(e.target.value)}
+                            value={updatedRating} 
+                             onChange = {(e) => {
+                            
+                             setUpdatedRating(e.target.value)
+                             // !! would like this change to show in edit stars, but not in above review stars
+                         }}
+                         
                         />
 
                        <FaStar 
                          size={30}
-                         color={updatedRating <= ( starRating) ? "#ffc107" : "#777"}
+                         color={updatedRating <= ( starRating ) ? "#ffc107" : "#777"}
+                        
+                       
                         //   onMouseEnter={() => setHover(ratingValue)}
                         //   onMouseOut={() => setHover(null)}
                         />
