@@ -235,25 +235,26 @@
       margin-top: 9px;
   }
   .signup{
-    background-color: rgb(160,155,145);
+    background-color: rgb(140,135,125);
     line-height: 30px;
-    padding: 10px;
+    padding: 14px;
     /* margin-top: 10px; */
     width: 350px;
     text-align: center;
-    border: .9px solid rgb(199,193,180);
+    /* border: .9px solid rgb(199,193,180); */
     position: relative;
     left: 30%;
     border-radius: 10%;
     
   }
   .login{
-   background-color: rgb(160,155,145);
-    line-height: 30px;
-    padding: 10px;
+   background-color: rgb(140,135,125);
+    line-height: 38px;
+    padding: 14px;
     width: 350px;
+    height: 300px;
     text-align: center;
-    border: .9px solid rgb(113, 112, 112);
+    /* border: .9px solid rgb(113, 112, 112); */
     position: relative;
     left: 30%;
     border-radius: 10%;
