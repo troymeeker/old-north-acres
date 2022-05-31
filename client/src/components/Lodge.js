@@ -2,7 +2,7 @@ import React from "react";
 import Reviews from "./Reviews";
 
 function Lodge({ lodging}){
-
+      console.log(lodging);
 
      const {id, name, image, description, sleeps, shower} = lodging; 
 
@@ -19,7 +19,6 @@ function Lodge({ lodging}){
            
             <Reviews lodging={lodging}/>  
         
-         
         <br/>
 
         </div>

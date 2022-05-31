@@ -27,11 +27,12 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
     }
 
     return (
-    //    if (review.lodging_id == lodging.id){}
+  
         
-        <div className="each-review">
-            <p> Reviewer:  {user_id}</p>
-            <p>lodging name: {name}</p>
+        <div className="each-review"> 
+       
+            <p> Reviewer: {user_id}</p>
+            <p>Lodge name: {name}</p>
             <p>{description}</p>
             <p>Rating: </p>
                
@@ -45,7 +46,7 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
                         type="radio" 
                         name="rating" 
                         value={ratingValue} 
-                        // onClick={() => setStarRating(ratingValue)}
+                          
                         />
 
                        <FaStar 
@@ -71,8 +72,8 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
               onEdit={handleEditReview} 
               toggleEdit={toggleEdit} 
               review={review} 
-              setStarRating={setStarRating}
-              starRating={starRating}
+            //   setStarRating={setStarRating}
+            //   starRating={starRating}
             /> : null}
     
         </div>

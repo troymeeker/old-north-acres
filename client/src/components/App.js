@@ -29,6 +29,10 @@ function App() {
    localStorage.setItem("DARK", darkTheme);
   }, [darkTheme]);
 
+  useEffect(()=> {
+    console.log("reviews", reviews);
+  })
+
   useEffect(() => {
     fetch("/me")
     .then((resp) => {
@@ -57,7 +61,9 @@ function App() {
     
     .then((resp) => resp.json())
     .then((review) => {
-         setReviews([...reviews,review])
+      console.log( reviews, review);
+        //  setReviews([...reviews,review])
+        //not needed, review still showing
     })
   }
  

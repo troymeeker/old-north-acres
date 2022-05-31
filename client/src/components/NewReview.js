@@ -15,9 +15,8 @@ function NewReview({onAddReview, reviews, setReviews}){
         color: darkTheme ? '#222' : '#333'
 
     }
-    // const [firstName, setFirstName] = useState("");
+  
     const [description, setDescription] = useState("");
-    
     const [lodging_id, setLodgingId] = useState('')
     const [starRating, setStarRating] = useState(null);
   

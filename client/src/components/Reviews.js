@@ -11,7 +11,7 @@ function Reviews({lodging}){
         fetch('/reviews')
         .then((resp) => resp.json())
         .then((reviews) => setReviews(reviews))
-      }, [setReviews]); 
+      }, []); 
    
     function handleReviewDelete(id){
       const updatedReviews = reviews.filter((review) => review.id !== id)
@@ -26,12 +26,9 @@ function Reviews({lodging}){
                 return review;
             }
         })
-        setReviews(updatedReviews)
-       
+        setReviews(updatedReviews)  
     }
 
-   
- 
     return (
         <div>  
            {reviews.map((review) => (

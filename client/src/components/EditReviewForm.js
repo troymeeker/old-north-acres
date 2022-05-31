@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import {FaStar} from 'react-icons/fa'
+import React, { useState, useEffect } from "react";
+// import {FaStar} from 'react-icons/fa'
+import StarTest from "./StarTest";
 
 
 function EditReviewForm({onEdit, review, toggleEdit}){
         const {id, description, starRating  } = review;
-        const [updatedRating, setUpdatedRating] = useState(starRating);
+        const [updatedStar, setUpdatedStar] = useState(starRating);
         const [updatedDescription, setupdatedDescription] = useState(description);
         // const [hover, setHover] = useState(null)
 
-    
+    useEffect(()=> {
+        console.log('rerender');
+    })
+
     function handleFormSubmit(e){
           e.preventDefault();
           toggleEdit();
@@ -21,7 +25,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
             },
             body: JSON.stringify({ 
                 description: updatedDescription,
-                starRating: updatedRating
+                starRating: updatedStar
             }),
         })
         .then((r) => r.json())
@@ -34,6 +38,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
     }
    
  
+
     return ( 
     <div >
                         
@@ -42,38 +47,14 @@ function EditReviewForm({onEdit, review, toggleEdit}){
             <textarea className="description-field" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></textarea><br/>
            
              <label>Edit Rating</label> 
-             <div>
-              {[...Array(5)].map((star, i) => {
-
-                    const updatedRating = i + 1;
-
-               return(<label key={i}>
-                       <input 
-                            type="radio" 
-                            name="rating" 
-                            value={updatedRating} 
-                             onChange = {(e) => {
-                            
-                             setUpdatedRating(e.target.value)
-                             // !! would like this change to show in edit stars, but not in above review stars
-                         }}
-                         
-                        />
-
-                       <FaStar 
-                         size={30}
-                         color={updatedRating <= ( starRating ) ? "#ffc107" : "#777"}
-                        
-                       
-                        //   onMouseEnter={() => setHover(ratingValue)}
-                        //   onMouseOut={() => setHover(null)}
-                        />
-               </label>)
-              })}
+            
+            <div>
+              {/* {stars} */}
+              <StarTest setUpdatedStar={setUpdatedStar} updatedStar={updatedStar}/>
             </div>
             
             
-            <button type="submit" onClick={handleFormSubmit}> Confirm Edit</button>
+            <button type="submit" onClick={handleFormSubmit}> CONFIRM</button>
         </form>            
     </div>
     )

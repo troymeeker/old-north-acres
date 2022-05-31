@@ -151,12 +151,13 @@
     height:fit-content;
     text-align: center;
     background-color: rgb(160,175,135);
-    padding: 2%;
+    padding: 1%;
 }
 .each-review{
     width: 70%;
     padding: 12px;
-    margin:65px;
+    margin:60px;
+  
     margin-left: 14%;
     height:fit-content;
     /* display: flex; */
@@ -232,7 +233,7 @@
    
     justify-content: row;
     background-color: rgb(160,175,135);
-    padding: 1px;
+    padding: 8px;
   
 }
 
@@ -299,9 +300,12 @@
   
   .lodge-item{
     /* border: 1px solid black; */
-     line-height: 200%;
+    line-height: 200%;
     width: 95%;
-    margin: 8px;
+    margin: 20px;
+    /* padding-right:5px; */
+   
+   /* text-align: center; */
   }
   
  

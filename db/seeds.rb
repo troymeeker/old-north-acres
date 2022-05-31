@@ -13,8 +13,8 @@ rev1 = Review.create( description: 'We had a great trip to the YURT! Will be rec
 # rev3 = Review.create( description: 'review 3 description test', starRating: 5, lodging_id: lodge3.id, user_id: user2.id)
 
 
-book1 = Booking.create(checkin: '2023-5-09' , checkout: '2023-5-13', user_id: user1.id, lodging_id: lodge1.id)
-book2 = Booking.create(checkin:'2022-11-12', checkout: '2023-11-19', user_id: user2.id, lodging_id: lodge2.id)
+# book1 = Booking.create(checkin: '2023-5-09' , checkout: '2023-5-13', user_id: user1.id, lodging_id: lodge1.id)
+# book2 = Booking.create(checkin:'2022-11-12', checkout: '2023-11-19', user_id: user2.id, lodging_id: lodge2.id)
 
 
 
