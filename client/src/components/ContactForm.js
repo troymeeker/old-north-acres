@@ -36,8 +36,8 @@ function ContactForm(){
         }
 
     return (
-        <div style={themeStyles}>
-            <form onSubmit={handleOnSubmit} className="form" style={formStyles}>
+        <div style={themeStyles} className="contact-div">
+            <form onSubmit={handleOnSubmit} style={formStyles} className="form">
         
              <h3>Contact us for more information!</h3> 
        

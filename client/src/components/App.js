@@ -20,18 +20,19 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
   const [darkTheme, setDarkTheme] = useState(localStorage.getItem("DARK") === 'true' );
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
 
   function toggleTheme(){
     setDarkTheme((darkTheme) => !darkTheme)
   }
+
   useEffect(() => {
    localStorage.setItem("DARK", darkTheme);
   }, [darkTheme]);
 
-  useEffect(()=> {
-    console.log("reviews", reviews);
-  })
+  // useEffect(()=> {
+  //   console.log("reviews", reviews);
+  // })
 
   useEffect(() => {
     fetch("/me")
@@ -61,7 +62,7 @@ function App() {
     
     .then((resp) => resp.json())
     .then((review) => {
-      console.log( reviews, review);
+      // console.log( reviews, review);
         //  setReviews([...reviews,review])
         //not needed, review still showing
     })

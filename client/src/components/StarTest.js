@@ -12,7 +12,7 @@ function StarTest({updatedStar, setUpdatedStar}){
               value={updatedValue} 
               onClick = {(e) => { 
                   setUpdatedStar(e.target.value)
-                  console.log(e.target.value);
+                //   console.log(e.target.value);
               //  !! would like this change to show in edit stars, but not in above review stars
               }}
            

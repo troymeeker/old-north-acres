@@ -42,11 +42,12 @@ function Contact(){
 
     return(
         
-        <div className='contact' style={themeStyles}>
+      <div className='contact' style={themeStyles}>
 
-            <img src={blueridge} alt="blue-ridge" className="blue-ridge"/> 
+             <ContactForm  />
+             <img src={blueridge} alt="blue-ridge" className="blue-ridge"/> 
 
-            <ContactForm  />
+           
       </div>
       )
     

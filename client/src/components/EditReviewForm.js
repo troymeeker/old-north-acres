@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import {FaStar} from 'react-icons/fa'
 import StarTest from "./StarTest";
 
@@ -9,9 +9,9 @@ function EditReviewForm({onEdit, review, toggleEdit}){
         const [updatedDescription, setupdatedDescription] = useState(description);
         // const [hover, setHover] = useState(null)
 
-    useEffect(()=> {
-        console.log('rerender');
-    })
+    // useEffect(()=> {
+    //     console.log('rerender');
+    // })
 
     function handleFormSubmit(e){
           e.preventDefault();
@@ -54,7 +54,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
             </div>
             
             
-            <button type="submit" onClick={handleFormSubmit}> CONFIRM</button>
+            <button type="submit" className="button" onClick={handleFormSubmit}> CONFIRM</button>
         </form>            
     </div>
     )

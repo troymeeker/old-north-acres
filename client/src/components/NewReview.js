@@ -73,7 +73,7 @@ function NewReview({onAddReview, reviews, setReviews}){
                <br/>
                 
              <label>Where did you stay? </label> 
-             <select  onChange={handleLodgingChange} >
+             <select onChange={handleLodgingChange} >
                  <option id="lodging_id" value=''>Select One</option>
                  <option id="lodging_id" value='1'>Yurt</option>
                  <option id="lodging_id" value='2'>Cabin</option>

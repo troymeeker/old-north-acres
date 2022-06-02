@@ -21,7 +21,7 @@ function BookTrip(){
         fetch('/lodgings')
         .then((resp) => resp.json())
         .then((lodgings) => setLodgings(lodgings))
-      }, []);
+     }, []);
 
 
     return (
@@ -30,7 +30,6 @@ function BookTrip(){
           
             {/* <p>Form or calendar here to select trip and display trips for current user</p>  */}
                
-             
               <div> 
 
                {lodgings.map((lodging) => (

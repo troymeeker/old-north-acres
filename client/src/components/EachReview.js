@@ -62,8 +62,8 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
         </div>
         {user_can_modify ? ( 
             <div>
-              <button onClick={toggleEdit}>EDIT REVIEW</button>
-              <button onClick={handleDeleteReview}>DELETE REVIEW</button>
+              <button onClick={toggleEdit} className='button'>EDIT REVIEW</button>
+              <button onClick={handleDeleteReview} className='button'>DELETE REVIEW</button>
             </div>
         ) : (null)}
 

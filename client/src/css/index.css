@@ -1,5 +1,6 @@
 *{
-    margin: 0px;
+    margin: 0;
+    padding:0;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
  
 }
@@ -21,31 +22,97 @@
     line-height: 30px;
 }
 .navbar{
-    list-style: none;
+   
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(135, 131, 121);
+
     height: fit-content;
-    padding: 8px;
+    color:white;
+    /* padding: 8px; */
+}
+.navbar-links{
+    height: 100%;
+}
+.navbar-links ul{
+   display: flex; 
+   margin:0;
+   padding:0;
+    
+}
+.navbar-links li{
+    list-style: none;
+  
+    /* display: block; */
+    
 }
 
-.nav-item{
-   
+.navbar-links li a {
+    padding:1.5rem;
+    display: block;
+    text-align: center;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    color:white;
     font-weight: bold;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-  
+
+}
+.navbar-links li:hover{
+   background-color: #666;
+}
+
+  .toggle{
+      position: absolute;
+      top:1rem;
+      right:1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+
+
   }
-  .nav-item:focus{
-    color:rgb(0, 0, 0);
-    background-color: rgb(186, 186, 186);
-    border-radius: 15%;
-  
+  .toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
   }
+   @media  (max-width: 967px){
+        .toggle{ 
+            display: flex;
+        }
+        .navbar-links{
+            /* display: none; */
+            width: 100%;
+        }
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+        .navbar-links ul{
+           width: 100%;
+           flex-direction: column;
+
+        }
+        .navbar-links li{
+          text-align: center;
+        
+        }
+        .navbar-links ul li a{
+            padding:.65rem .75rem;
+            text-align: center;
+    
+        
+        }
+        .navbar-links.active{
+            display: flex;
+        }
+    } 
+      
+  
   .dark-button{
     
       margin:15px;
@@ -67,27 +134,23 @@
    
       
   }
-  
-
+  .contact-div{
+      padding: 10px; 
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
 .form{
-  
+ 
+ 
+    padding: 30px;
     border-radius: 10px;
-    padding: 20px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    background-color: rgb(169, 161, 152);
-    /* width: fit-content; */
-    
+ 
+    margin:30px;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
-    /* display: flex;
-   
-    justify-content: row; */
-    /* border: .9px solid rgb(113, 112, 112); */
-    position: absolute;
-    left: 50%;
-    top:48%;
-    
-   
+
 }
 .form-message{
     height: 90px;
@@ -106,9 +169,13 @@
 }
 .welcome{
     position: relative;
-    top:20px;
+    left:2px;
+    margin:6px;
    
 
+}
+.login-darkmode{
+    margin:5px;
 }
 .submit-button{
     width: 80px;
@@ -124,6 +191,17 @@
     color:white;
   
  
+}
+.button{
+    padding:5px;
+    border-radius: 5px;
+   border: 1px solid black;
+   margin:4px;
+}
+.button:active{
+    background-color: rgb(166, 164, 164);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(121, 121, 121);
 }
 .book_trip{
     height: fit-content;
@@ -212,30 +290,14 @@
    
 }
 .blue-ridge{
-    height: 320px;
-    width: 430px; 
+    height: 300px;
+    width: 450px; 
     margin: 20px;
-    /* background-position: center; */
-    /* background-size: cover;  */
-   
+
     padding: 20px;
-
-    /* display: flex; */
     
-   
 }
 
-.contact{
-    height:fit-content;
-    
-    text-align: center;
-    display: flex;
-   
-    justify-content: row;
-    background-color: rgb(160,175,135);
-    padding: 8px;
-  
-}
 
 .unauthpage{
   
