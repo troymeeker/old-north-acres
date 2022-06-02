@@ -1,31 +1,33 @@
 import React, {useContext, useState} from 'react';
-
 import { ThemeContext } from './App';
-// import { NavLink } from 'react-router-dom';
 import Logout from './Logout';
-
 
 function Navbar({currentUser, setCurrentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
-    // const [dropMenu, setDropMenu] = useState(false);
+    
+    const [isActive, setisActive] = useState(false);
     // const [{ theme, darkTheme }, toggleTheme] = useContext(ThemeContext);
+    // const navlinks = document.getElementsByClassName('navbar-links')
+  
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(115, 111, 101)' : 'rgb(135, 131, 121)', 
        
          color: darkTheme ? '#222' : '#111'
 
     }
- function handleMenuClick(){
-    //  setDropMenu(()=>!dropMenu)
-     document.getElementsByClassName('navbar-links')[0].classList.toggle('active')
-     
+  
+ function toggleClass(){
+     setisActive(() => !isActive)
+    //  need to toggle class name of navbar links to active class
+
+    //   console.log(isActive);
+  
  }
-   
 
     return (
-        <div style={themeStyles}> 
-            <nav className='navbar'>
-                <a href="# " className='toggle' onClick={handleMenuClick}>
+       
+            <nav style={themeStyles} className='navbar'>
+                <a href="# " className='toggle' onClick={toggleClass}>
 
                     <span className='bar'></span>
                     <span className='bar'></span>
@@ -33,7 +35,9 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                 </a>
                 <p className='welcome'>Welcome {currentUser.username[0].toUpperCase() + currentUser.username.substring(1)}</p>
                     
-                <div className='navbar-links' >
+                 <div className={isActive ? 'links-hidden': 'navbar-links'}
+                
+                 >
 
                     <ul>
                         <li><a href='/' >HOME</a></li>
@@ -42,7 +46,7 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                         <li><a href='/newreview' >NEW REVIEW</a></li>
                         <li><a href='/contact' >CONTACT</a></li>
                    </ul> 
-                </div>  
+                 </div>  
                 <div className='login-darkmode'>
                     <Logout setCurrentUser={setCurrentUser}/> 
                     <button onClick={toggleTheme} className='dark-button'> DARK MODE: {darkTheme ? 'ON' : 'OFF'} </button>
@@ -50,7 +54,7 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                  
                
             </nav>  
-        </div>
+       
     );
 }
 

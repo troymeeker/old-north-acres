@@ -24,16 +24,20 @@
 .navbar{
    
     display: flex;
-    justify-content: space-evenly;
+    position: relative;
+    justify-content:space-around;
     align-items: center;
     background-color: rgb(135, 131, 121);
-
-    height: fit-content;
     color:white;
-    /* padding: 8px; */
+    height: fit-content;
+    padding:4px;
+   
 }
+
 .navbar-links{
+    display: flex;
     height: 100%;
+    
 }
 .navbar-links ul{
    display: flex; 
@@ -43,22 +47,20 @@
 }
 .navbar-links li{
     list-style: none;
-  
-    /* display: block; */
     
 }
 
 .navbar-links li a {
-    padding:1.5rem;
-    display: block;
-    text-align: center;
-    text-decoration: none;
+   text-decoration: none;
+    padding:1rem;
+    display: block; 
     color:white;
     font-weight: bold;
 
 }
 .navbar-links li:hover{
    background-color: #666;
+ 
 }
 
   .toggle{
@@ -79,48 +81,95 @@
     background-color: white;
     border-radius: 10px;
   }
-   @media  (max-width: 967px){
-        .toggle{ 
-            display: flex;
-        }
-        .navbar-links{
-            /* display: none; */
-            width: 100%;
-        }
-        .navbar{
-            flex-direction: column;
-            align-items: flex-start;
-            
-        }
-        .navbar-links ul{
-           width: 100%;
-           flex-direction: column;
 
-        }
-        .navbar-links li{
-          text-align: center;
-        
-        }
-        .navbar-links ul li a{
-            padding:.65rem .75rem;
-            text-align: center;
+ .links-hidden{
+    display: flex;
     
-        
-        }
-        .navbar-links.active{
-            display: flex;
-        }
-    } 
+    height: 100%;
+ }
+
+.links-hidden ul{
+   display: flex; 
+   margin:0;
+   padding:0;
+    
+}
+.links-hidden li{
+    list-style: none;
+    
+}
+
+.links-hidden li a {
+   text-decoration: none;
+    padding:1rem;
+    display: block; 
+   
+    color:white;
+    font-weight: bold;
+
+}
+.links-hidden li:hover{
+   background-color: #666;
+ 
+}
+
+  @media (max-width: 990px) {
+      /* meaning when media is <900px */
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        /* list-style: none;
+        text-decoration: none; */
+      }
+      .toggle{
+        display: flex;
+      }
+      .navbar-links{
+       
+        display: none;
+        width: 100%;
+       
+      }
+      .links-hidden ul{
+          width: 100%;
+          flex-direction: column;
+           
+      }
+
+      .links-hidden ul li{
+          text-align: center;
+           /* color:white; */
+           
+
+      }
+      .links-hidden ul li a{
+          padding: .5rem 1rem;
+          text-align: center;
+           
+      }
+     
+      .links-hidden{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+       
+      } 
+    
+
+  }
+ 
+
       
   
   .dark-button{
     
-      margin:15px;
+      margin:8px;
+
       width: 125px;
       border-radius: 5px;
       height: fit-content;
-      padding:7px;
-      margin-top: 9px;
+      padding:6px;
+     
   }
    input[type="radio"]{
        display: none;
@@ -142,10 +191,8 @@
   }
 .form{
  
- 
     padding: 30px;
     border-radius: 10px;
- 
     margin:30px;
     width: fit-content;
     height: fit-content;
@@ -174,9 +221,7 @@
    
 
 }
-.login-darkmode{
-    margin:5px;
-}
+
 .submit-button{
     width: 80px;
     padding: 7px;
@@ -310,10 +355,12 @@
   }
  
   .logout-button{
+      
+      margin:8px;
+      width: 75px;
       border-radius: 5px;
       height: fit-content;
-      padding:7px;
-      margin-top: 9px;
+      padding:5px;
   }
   .signup{
     background-color: rgb(140,135,125);
