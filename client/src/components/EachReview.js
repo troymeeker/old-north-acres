@@ -5,7 +5,8 @@ import {FaStar} from 'react-icons/fa'
 
 function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
     const [editReview, setEditReview] = useState(false); 
-    const { id, description, user_can_modify, user_id, starRating} = review;
+    const { id, description, user_can_modify, starRating, user} = review;
+    //get user 
     const { name } = lodging;
 
 
@@ -31,7 +32,9 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
         
         <div className="each-review"> 
        
-            <p> Reviewer: {user_id}</p>
+            {/* <p> Reviewer: {user_id}</p> */}
+            
+            <p>Reviewer: {user.username[0].toUpperCase() + user.username.substring(1)}</p>
             <p>Lodge name: {name}</p>
             <p>{description}</p>
             <p>Rating: </p>

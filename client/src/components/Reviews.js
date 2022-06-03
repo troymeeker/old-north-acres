@@ -31,7 +31,9 @@ function Reviews({lodging}){
 
     return (
         <div>  
+           {/* //reviews.filter here */}
            {reviews.map((review) => (
+               //filter 
               <EachReview 
 
                 key={review.id}

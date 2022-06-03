@@ -55,7 +55,7 @@ const Signup = ({setCurrentUser, setAcctExists, acctExists}) => {
                
             </form>
             <p>Already have an account? </p>
-            <button onClick={() => setAcctExists(!acctExists)}> Log In </button>
+            <button onClick={() => setAcctExists(!acctExists)} className="login-signup"> LOG IN </button>
         
       
             </div>

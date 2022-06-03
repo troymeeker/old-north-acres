@@ -64,7 +64,7 @@ const navigate = useNavigate();
 
         </form>
         <p>Don't have an account? </p>
-            <button onClick={()=> setAcctExists(!acctExists)}> Signup </button>
+            <button onClick={()=> setAcctExists(!acctExists)} className="login-signup"> SIGNUP </button>
         {/* { signedUp ? () : ( <button onClick={handleSigninToggle}>Create Account</button>)}
          
          { signedUp ? (<Signup setCurrentUser={setCurrentUser}/>): (null)} */}
