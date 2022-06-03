@@ -31,35 +31,22 @@ function Reviews({lodging}){
 
     return (
         <div>  
-         
-         
-             
-           {/* {reviews.filter((review) => {
-             if(review.lodging_id === lodging.id ) { */}
-                  {reviews.map((review) => ( 
-                       <EachReview 
+         {reviews.filter((review) => review.lodging_id === lodging.id).map((review) =>
+     
+                    {  return <EachReview 
 
-                        key={review.id}
-                        review={review}
-                        onDelete={handleReviewDelete}
-                        onEdit={handleReviewEdit}
-                        starRating={starRating}
-                        setStarRating={setStarRating}
-                        lodging={lodging}
-                    />
-                    ))}
-             {/* }
-   
-                 
-                    })  
-                    } */}
-                 
-
-          
-          
-           {/* <button  onClick={navToLodges}> See all Reviews</button>  */}
-
-           </div>
+                            key={review.id}
+                            review={review}
+                            onDelete={handleReviewDelete}
+                            onEdit={handleReviewEdit}
+                            starRating={starRating}
+                            setStarRating={setStarRating}
+                            lodging={lodging}
+                        />
+                    }
+                )}
+        
+        </div>
     )
 }
 
