@@ -30,6 +30,7 @@ const navigate = useNavigate();
                 res.json().then((errors) => { 
                      console.log(errors)
                      alert("Invalid Username or Password");
+                     
                     })
             }
            

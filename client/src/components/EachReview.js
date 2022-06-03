@@ -34,7 +34,7 @@ function EachReview({review, onDelete, onEdit, setStarRating, lodging}){
        
             {/* <p> Reviewer: {user_id}</p> */}
             
-            <p>Reviewer: {user.username[0].toUpperCase() + user.username.substring(1)}</p>
+            <p>Reviewer Name: {user.username[0].toUpperCase() + user.username.substring(1)}</p>
             <p>Lodge name: {name}</p>
             <p>{description}</p>
             <p>Rating: </p>

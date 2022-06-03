@@ -22,6 +22,7 @@ class ReviewsController < ApplicationController
           render json: review, status: :created
         else
           render json:{ error: review.errors.full_messages.to_sentence}, status: :unprocessable_entity
+          # show error "Description and Rating must exist"
         end
       end
 

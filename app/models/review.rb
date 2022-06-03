@@ -6,6 +6,7 @@ class Review < ApplicationRecord
 
   
     validates :description, presence: true
+    validates :starRating, presence: true
      # join table for user/lodging
 
     

@@ -62,10 +62,15 @@ function App() {
     
     .then((resp) => resp.json())
     .then((review) => {
+      //if resp.ok
+      //
+      //else  alert(JSON.stringify(review.error))
+     
+
       // console.log( reviews, review);
         // setReviews([...reviews,review])
         //not needed, review still showing
-        
+
     })
   }
  

@@ -36,8 +36,12 @@ function NewReview({onAddReview, reviews, setReviews}){
         setDescription("")
         setStarRating(null)
         setLodgingId("")
-        navigate('/book');
-        // console.log(review);
+       
+        setTimeout(() => {
+            navigate('/book')
+        },50)
+       //set timeout to ensure reviews display properly 
+      
 
    } 
  
@@ -55,7 +59,7 @@ function NewReview({onAddReview, reviews, setReviews}){
             <h1>Tell us about your stay!</h1>
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
-              {/* <h4>TELL US ABOUT YOUR STAY!</h4> */}
+           
              <label>How was your stay with us?</label>
              <StarRating setStarRating={setStarRating} starRating={starRating}/>
             
