@@ -86,7 +86,7 @@ function NewReview({onAddReview, reviews, setReviews}){
              </select><br/>
              <button className="add-btn">ADD REVIEW</button>
             </form>
-
+       
         </div>
        
         </div>

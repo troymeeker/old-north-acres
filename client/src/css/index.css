@@ -193,9 +193,14 @@
   }
   .contact-div{
       padding: 10px; 
+      margin-left:10vw;
       display: flex;
       justify-content: space-around;
       align-items: center;
+  }
+  .contact{
+      display: flex;
+      flex-direction: row;
   }
 .form{
  
@@ -211,16 +216,18 @@
     height: 90px;
     width: 350px;
     margin: 5px;
+    padding:2px;
 }
 .form-input{
     height:20px;
     width: 200px;
     margin: 5px;
+    padding:2px;
 
 }
 .description-field{
     height: 90px;
-    width: 350px;
+    width: 300px;
 }
 .welcome{
     position: relative;
@@ -300,7 +307,7 @@
   .item-description{
     height: 90px;
     width: 250px;
-    
+    padding: 2px;
   }
 
 .grid-item{
@@ -342,12 +349,16 @@
     background-size: cover; 
    
 }
-.blue-ridge{
-    height: 300px;
-    width: 450px; 
-    margin: 20px;
 
+.poppy{
+    height: 420px;
+    width: 360px; 
+    margin: 20px;
+    display: flex;
+    
+    margin-left: 10vw;
     padding: 20px;
+
     
 }
 

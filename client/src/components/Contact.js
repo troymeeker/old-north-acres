@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { ThemeContext } from './App';
-import blueridge from '../images/blue-ridge.jpeg';
-
+// import blueridge from '../images/blue-ridge.jpeg';
+import poppy from '../images/poppy.png';
 
 import ContactForm from './ContactForm';
 
@@ -13,40 +13,18 @@ function Contact(){
         color: darkTheme ? '#333' : '#000',
        
     }
-    // const formStyles = {
-    //     backgroundColor: darkTheme  ? 'rgb(120,120,120)': 'rgb(120,150,120)', 
-    //     color: darkTheme ? '#333': '#111'
-    // }
-    // const SERVICE_ID = 'service_meagxfb';
-    // const TEMPLATE_ID = 'template_jm63u5s';
-    // const USER_ID = '33t3tPMjxMD4rRJ5P';
-   
-    // function handleOnSubmit(e){
-    //     e.preventDefault();
-        
-    //     emailjs.sendForm(
-    //         SERVICE_ID, TEMPLATE_ID, e.target, USER_ID
-    //     )
-    //         .then((result) => {
-    //             alert(result.text);
-    //             //render success message not alert
-    //         }, (error) => {
-    //             alert(error.text);
-    //             //render failure message not alert
-    //         });
-    //         //clears the form after sending the email
-    //         e.target.reset();
-    //     }
+  
 
     
 
     return(
         
       <div className='contact' style={themeStyles}>
-
+            <img src={poppy} alt="poppy chilling in a field" className="poppy"/> 
              <ContactForm  />
-             <img src={blueridge} alt="blue-ridge" className="blue-ridge"/> 
-
+             
+              {/* <img src={blueridge} alt="blue-ridge" className="blue-ridge"/> 
+             */}
            
       </div>
       )

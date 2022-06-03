@@ -86,6 +86,8 @@ function ContactForm(){
             <button type='submit' className='submit-button'>Submit</button>
         
             </form>  
+
+            {/* render success message */}
         </div>
     )
 
