@@ -61,7 +61,7 @@ function NewReview({onAddReview, reviews, setReviews}){
             <form  onSubmit={submitNewReview} className="newreview" >
            
              <label>How was your stay with us?</label>
-             <StarRating setStarRating={setStarRating} starRating={starRating}/>
+             <StarRating setStarRating={setStarRating} starRating={starRating} />
             
             
              <label>Description </label><br/>
@@ -70,6 +70,7 @@ function NewReview({onAddReview, reviews, setReviews}){
                 placeholder="description"
                 className="item-description"
                 id="description"
+                required
                 onChange={handleDescriptionChange}
                 value={description}
                 
@@ -77,7 +78,7 @@ function NewReview({onAddReview, reviews, setReviews}){
                <br/>
                 
              <label>Where did you stay? </label> 
-             <select onChange={handleLodgingChange} >
+             <select onChange={handleLodgingChange} required >
                  <option id="lodging_id" value=''>Select One</option>
                  <option id="lodging_id" value='1'>Yurt</option>
                  <option id="lodging_id" value='2'>Cabin</option>

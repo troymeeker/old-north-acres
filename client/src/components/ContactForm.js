@@ -1,8 +1,9 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { ThemeContext } from './App';
 import emailjs from 'emailjs-com';
 
 function ContactForm(){
+    const [submitted, setSubmitted] = useState(false)
     const darkTheme = useContext(ThemeContext)
     const themeStyles = {
         backgroundColor: darkTheme ? 'rgb(80,90,70)' : 'rgb(170,185,145)', 
@@ -33,6 +34,8 @@ function ContactForm(){
             });
             //clears the form after sending the email
             e.target.reset();
+            setSubmitted(true)
+
         }
 
     return (
@@ -70,6 +73,7 @@ function ContactForm(){
                     placeholder='Subject'
                     className='form-input'
                     tabIndex="3"
+                    required
                 
             />
             <br/>
@@ -85,6 +89,8 @@ function ContactForm(){
         
             <button type='submit' className='submit-button'>Submit</button>
         
+        {submitted ? <h4 className='succes-msg'>Your contact has been sent, we will be in touch with you soon!</h4> : null}
+
             </form>  
 
             {/* render success message */}

@@ -16,7 +16,7 @@ function StarRating({   starRating, setStarRating}){
                         name="rating" 
                         value={ratingValue} 
                         onChange = {(e) => setStarRating(e.target.value)}
-                     
+                        // required
                         />
 
                        <FaStar 
