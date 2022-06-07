@@ -27,6 +27,7 @@ function ContactForm(){
         )
             .then((result) => {
                 alert(result.text);
+                
                 //render success message not alert
             }, (error) => {
                 alert(error.text);

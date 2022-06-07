@@ -1,5 +1,4 @@
 import React, {  useEffect, useState } from "react";
-
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -30,9 +29,6 @@ function App() {
    localStorage.setItem("DARK", darkTheme);
   }, [darkTheme]);
 
-  // useEffect(()=> {
-  //   console.log("reviews", reviews);
-  // })
 
   useEffect(() => {
     fetch("/me")
