@@ -2,8 +2,7 @@ import React, {useState} from 'react'
 import {FaStar } from 'react-icons/fa'
 
 function StarRating({   starRating, setStarRating}){
-    
-     const [hover, setHover] = useState(null); 
+  
     return (
         <div>
             {[...Array(5)].map((star, i) => {
@@ -22,9 +21,9 @@ function StarRating({   starRating, setStarRating}){
 
                        <FaStar 
                          size={30}
-                         color={ratingValue <= ( hover || starRating ) ? "#ffc107" : "#777"}
-                          onMouseEnter={() => setHover(ratingValue)}
-                         onMouseLeave={() => setHover(null)}
+                         color={ratingValue <= (  starRating ) ? "#ffc107" : "#777"}
+                        //   onMouseEnter={() => setHover(ratingValue)}
+                        //   onMouseLeave={() => setHover(null)}
                         />
                     </label>
                    )
