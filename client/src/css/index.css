@@ -62,6 +62,12 @@
    background-color: #666;
  
 }
+.required-star{
+    color: rgb(130, 38, 38);
+    margin: 0;
+    display:inline;
+    /* float:left; */
+}
 
   .toggle{
       position: absolute;
@@ -184,9 +190,11 @@
       padding:6px;
      
   }
+  
    input[type="radio"]{
        display: none;
    }
+
   .old-north-img{
       height: 30vh;
       width: inherit;
@@ -230,9 +238,11 @@
     padding:2px;
 
 }
-.description-field{
+.description-edit{
     height: 90px;
     width: 300px;
+   
+    padding:3px;
 }
 .welcome{
     position: relative;
@@ -303,16 +313,14 @@
   
     margin-left: 14%;
     height:fit-content;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    border: 1px solid black;
+    border: 1px solid rgb(47, 47, 47);
     border-radius: 8px;
   }
   .item-description{
     height: 90px;
     width: 250px;
     padding: 2px;
+   
   }
 
 .grid-item{
@@ -326,7 +334,6 @@
 .grid-item:hover{
     position: relative;
     top: 7px;
-  
     opacity: 10%;
 }
 .about{

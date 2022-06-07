@@ -39,8 +39,8 @@ function NewReview({onAddReview, reviews, setReviews}){
        
         setTimeout(() => {
             navigate('/book')
-        },50)
-       //set timeout to ensure reviews display properly 
+        },70)
+       //set timeout to ensure reviews load properly 
       
 
    } 
@@ -60,11 +60,11 @@ function NewReview({onAddReview, reviews, setReviews}){
          <div className="form-div">
             <form  onSubmit={submitNewReview} className="newreview" >
            
-             <label>How was your stay with us?</label>
+             <label >How was your stay with us? <p className="required-star">* </p> </label>
              <StarRating setStarRating={setStarRating} starRating={starRating} />
             
             
-             <label>Description </label><br/>
+             <label>Description <p className="required-star">* </p> </label><br/>
              <textarea 
                 type="text"
                 placeholder="description"
@@ -77,7 +77,7 @@ function NewReview({onAddReview, reviews, setReviews}){
             />
                <br/>
                 
-             <label>Where did you stay? </label> 
+             <label>Where did you stay?<p className="required-star"> * </p></label> 
              <select onChange={handleLodgingChange} required >
                  <option id="lodging_id" value=''>Select One</option>
                  <option id="lodging_id" value='1'>Yurt</option>
@@ -86,6 +86,7 @@ function NewReview({onAddReview, reviews, setReviews}){
                
              </select><br/>
              <button className="add-btn">ADD REVIEW</button>
+              <h5><p className="required-star">*</p> denotes required field</h5>
             </form>
        
         </div>

@@ -44,7 +44,7 @@ function EditReviewForm({onEdit, review, toggleEdit}){
                         
         <form >
             <label>Edit Description</label><br/>
-            <textarea className="description-field" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></textarea><br/>
+            <textarea className="description-edit" type="text" placeholder={description} value={updatedDescription} onChange={(e) => setupdatedDescription(e.target.value)}></textarea><br/>
            
              <label>Edit Rating</label> 
             
