@@ -13,7 +13,7 @@ function Footer(){
         <footer className="footer">
            
             <div className="footer-img" >
-                 <a href="https://www.instagram.com/oldnorthacres/" target="_blank" alt="instagram" rel="noreferrer"><img src={instalogo} alt="instagram logo" id="insta-img" /></a>
+                 <a href="https://www.instagram.com/oldnorthacres/" target="_blank" alt="instagram"  rel="noopener noreferrer"><img src={instalogo} alt="instagram logo" id="insta-img" /></a>
             </div>
         
             <div className="footer-img" id="mail-img">

@@ -1,57 +1,53 @@
-import React, {  useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Navbar from "./NavBar";
-import Contact from "./Contact";
-import BookTrip from "./BookTrip";
-import NewReview from "./NewReview";
-import Footer from "./Footer";
-import Unauth from "./Unauth";
-import instalogo from "../images/insta.png"
+import React,{ useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Navbar from './NavBar';
+import Contact from './Contact';
+import BookTrip from './BookTrip';
+import NewReview from './NewReview';
+import Footer from './Footer';
+import Unauth from './Unauth';
+import instalogo from '../images/insta.png';
 
 export const ThemeContext = React.createContext();
-
 
 function App() {
   // const storedDarkTheme = localStorage.getItem("DARK");
 
   const [currentUser, setCurrentUser] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
-  const [darkTheme, setDarkTheme] = useState(localStorage.getItem("DARK") === 'true' );
+  const [darkTheme, setDarkTheme] = useState(localStorage.getItem('DARK') === 'true' );
   // const [reviews, setReviews] = useState([]);
 
-  function toggleTheme(){
-    setDarkTheme((darkTheme) => !darkTheme)
+  function toggleTheme() {
+    setDarkTheme((darkTheme) => !darkTheme);
   }
 
   useEffect(() => {
-   localStorage.setItem("DARK", darkTheme);
+    localStorage.setItem('DARK', darkTheme);
   }, [darkTheme]);
 
-
   useEffect(() => {
-    fetch("/me")
+    fetch('/me')
     .then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => {
-          setCurrentUser(user)
-          setAuthChecked(true)
+          setCurrentUser(user);
+          setAuthChecked(true);
           
         })
        } else {
-         setAuthChecked(true)
+         setAuthChecked(true);
        }
     })
-  }, [])
+  }, []);
 
-
-  function handleReviewAdd(review){
-    
-    fetch("/reviews", {
-        method: "POST", 
+  function handleReviewAdd(review) {
+    fetch('/reviews', {
+        method: 'POST', 
         headers: {
-           "Content-Type": "application/json"
+           'Content-Type': 'application/json'
         },
         body: JSON.stringify(review)
     })
@@ -105,7 +101,7 @@ function App() {
       <Unauth setCurrentUser={setCurrentUser}/>
       <footer className="footer">
          <div className="footer-img" >
-            <a href="https://www.instagram.com/oldnorthacres/" target="_blank" alt="instagram" rel="noreferrer"><img src={instalogo} alt="instagram logo" id="insta-img" /></a>
+            <a href="https://www.instagram.com/oldnorthacres/" target="_blank" alt="instagram" rel="noopener noreferrer"><img src={instalogo} alt="instagram logo" id="insta-img" /></a>
          </div>
       </footer>
     </>
