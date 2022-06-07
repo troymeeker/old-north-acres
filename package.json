@@ -11,7 +11,7 @@
         "eject": " DISABLE_ESLINT_PLUGIN=true react-scripts eject",
         "clean": " DISABLE_ESLINT_PLUGIN=true rm -rf public",
         "deploy": " DISABLE_ESLINT_PLUGIN=true cp -a client/build/. public/",
-        "heroku-postbuild": " DISABLE_ESLINT_PLUGIN=true npm run clean && npm run build && npm run deploy"
+        "heroku-postbuild": " npm run clean && npm run build && npm run deploy"
     },
     "dependencies": {
         "@emailjs/browser": "^3.6.2",
