@@ -1,5 +1,6 @@
 import React from 'react';
-import {FaStar} from 'react-icons/fa'
+import {FaStar} from 'react-icons/fa';
+
 function StarTest({updatedStar, setUpdatedStar}){
     const stars = [...Array(5)].map((star, i) => {
 
