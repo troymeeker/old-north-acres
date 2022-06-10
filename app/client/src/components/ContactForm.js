@@ -90,7 +90,7 @@ function ContactForm(){
         
             <button type='submit' className='submit-button'>Submit</button>
         
-        {submitted ? <h4 className='success-msg'>Your contact has been sent, we will be in touch with you soon!</h4> : null}
+        {submitted ? <h4 className='succes-msg'>Your contact has been sent, we will be in touch with you soon!</h4> : null}
 
             </form>  
 

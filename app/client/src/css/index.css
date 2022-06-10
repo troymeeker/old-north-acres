@@ -81,7 +81,7 @@
 
 
   }
-  .success-msg{
+  .succes-msg{
       border: 1px solid black;
       padding:4px;
       margin:4px;
@@ -206,15 +206,14 @@
   }
   .contact-div{
       padding: 10px; 
-      margin-left:25px;
+      margin-left:10vw;
       display: flex;
-      /* justify-content: space-around; */
+      justify-content: space-around;
       align-items: center;
   }
   .contact{
       display: flex;
       flex-direction: row;
-    
   }
 .form{
  
@@ -380,10 +379,8 @@
   
     line-height: 35px;
     padding: 40px;
-    height: fit-content;
+    height: 100vh;
     text-align: center;
-    padding-left:10vw;
- 
     background-color: rgb(165,170,175);
         
   }
