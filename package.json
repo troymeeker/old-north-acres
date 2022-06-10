@@ -2,7 +2,7 @@
     "name": "old-north-acres",
     "description": "Build scripts for Heroku",
     "engines": {
-        "node": ">=16.2.0"
+        "node": "16.x"
     },
     "scripts": {
         "clean": "rm -rf public",
