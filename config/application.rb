@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails"
+require 'rails_helper'
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
@@ -30,6 +31,11 @@ module OldNorthAcres
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    describe 'Zeitwerk' do
+      it 'eager loads all files' do
+        expect { Zeitwerk::Loader.eager_load_all }.not_to raise_error
+      end
+    end
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
