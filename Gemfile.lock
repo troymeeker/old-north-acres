@@ -181,9 +181,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   debug
-  net-imap
-  net-pop
-  net-smtp
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
