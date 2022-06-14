@@ -12,6 +12,12 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
+
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
