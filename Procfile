@@ -1,2 +1,2 @@
-web: node ./client/index.js
+web: node ./client/src/index.js
 release: bin/rake db:migrate
