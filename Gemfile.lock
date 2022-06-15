@@ -76,6 +76,7 @@ GEM
     debug (1.5.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
+    digest (3.1.0)
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -96,6 +97,20 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.16.0)
     msgpack (1.5.1)
+    net-imap (0.2.3)
+      digest
+      net-protocol
+      strscan
+    net-pop (0.1.1)
+      digest
+      net-protocol
+      timeout
+    net-protocol (0.1.3)
+      timeout
+    net-smtp (0.3.1)
+      digest
+      net-protocol
+      timeout
     nio4r (2.5.8)
     nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
@@ -147,7 +162,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    strscan (3.0.3)
     thor (1.2.1)
+    timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.5)
@@ -165,6 +182,9 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   debug
+  net-imap
+  net-pop
+  net-smtp
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.3, >= 6.1.3.2)
