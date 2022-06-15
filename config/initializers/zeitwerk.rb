@@ -1,1 +1,1 @@
-# Rails.autoloaders.main.inflector.inflect("connection" => "CONNECTION")
+Rails.autoloaders.main.inflector.inflect("connection" => "Connection")
