@@ -22,7 +22,7 @@ Bundler.require(*Rails.groups)
 module OldNorthAcres
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -43,6 +43,6 @@ module OldNorthAcres
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
-    config.autoload = :classic
+    config.autoloader = :classic
   end
 end

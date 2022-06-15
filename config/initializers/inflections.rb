@@ -14,6 +14,6 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym "RESTful"
 # end
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#     inflect.acronym "connection"
-# end
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+    inflect.acronym "Connection"
+end
