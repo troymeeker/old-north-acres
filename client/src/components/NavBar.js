@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import { ThemeContext } from './App';
 import Logout from './Logout';
 
+
 function Navbar({currentUser, setCurrentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
     
@@ -41,7 +42,9 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
 
                     <ul>
                         <li><a href='/' >HOME</a></li>
+                       
                         <li><a href='/about' >ABOUT</a></li>
+                       
                         <li><a href='/book' >LODGING</a></li>
                         <li><a href='/newreview' >NEW REVIEW</a></li>
                         <li><a href='/contact' >CONTACT</a></li>
