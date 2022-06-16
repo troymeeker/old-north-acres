@@ -1,7 +1,6 @@
 {
     "name": "old-north-acres",
     "description": "Build scripts for Heroku",
-    "type": "module",
     "engines": {
         "node": " 16.14.2"
     },
