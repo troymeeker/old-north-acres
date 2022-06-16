@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         else
           render json: { error: "No active session"}, status: :unauthorized
         end
-      end
+    end
 
      # POST /signup
   def create

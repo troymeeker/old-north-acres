@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   delete "/userlogout", to: "sessions#destroy"
 
   get "/about", to: "static_pages#about"
+  get "/newreview", to: "static_pages#newreview"
+  get "/book", to: "static_pages#book"
+  get "/contact", to: "static_pages#contact"
 
 end
