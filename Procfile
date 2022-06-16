@@ -1,2 +1,2 @@
-web: node --experimental-modules index.js
+web: node ./client/src/index.js
 release: bin/rake db:migrate
