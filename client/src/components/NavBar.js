@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import { ThemeContext } from './App';
 import Logout from './Logout';
 import { NavLink } from 'react-router-dom';
+import mail from '../images/mail.png';
 
 function Navbar({currentUser, setCurrentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
@@ -52,7 +53,10 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                         <li><a> <NavLink to='/book' >LODGING</NavLink></a></li>
                         <li><a><NavLink to='/newreview' >NEW REVIEW</NavLink></a></li>
                         <li><a><NavLink to='/contact' >CONTACT </NavLink></a></li>
-                  
+                         
+                         <div className="footer-img" id="mail-img">
+                             <NavLink to='/contact' ><img src={mail} alt="mail-logo" /></NavLink>
+                         </div>
                         
                    </ul> 
                  </div>  
