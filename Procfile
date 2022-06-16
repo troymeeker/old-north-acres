@@ -1,2 +1,2 @@
-web: node ./client/src/index.js
+web: bundle exec rails s
 release: bin/rake db:migrate
