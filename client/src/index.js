@@ -6,12 +6,11 @@ import App from './components/App';
 import { BrowserRouter } from 'react-router-dom';
 
 
-// const root = createRoot(document.getElementById('root'));
-// root.
-ReactDOM.render(
-     <BrowserRouter>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+   (  <BrowserRouter>
           <App/>
-     </BrowserRouter>
+     </BrowserRouter>)
 );
 
 
