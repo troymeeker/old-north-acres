@@ -53,7 +53,8 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                         <li><a> <NavLink to='/book' >LODGING</NavLink></a></li>
                         <li><a><NavLink to='/newreview' >NEW REVIEW</NavLink></a></li>
                         <li><a><NavLink to='/contact' >CONTACT </NavLink></a></li>
-                         
+                        <li><a><NavLink to='/' >test </NavLink></a></li>
+                        
                          <div className="footer-img" id="mail-img">
                              <NavLink to='/contact' ><img src={mail} alt="mail-logo" /></NavLink>
                          </div>
