@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post "/userlogin", to: "sessions#create"
   delete "/userlogout", to: "sessions#destroy"
 
+  get "/about" to: "static_pages#about"
+
 end
