@@ -2,6 +2,7 @@
     "name": "old-north-acres",
     "description": "Build scripts for Heroku",
     "type": "module",
+    "homepage": "https://guarded-citadel-29737.herokuapp.com",
     "engines": {
         "node": " 16.14.2"
     },
