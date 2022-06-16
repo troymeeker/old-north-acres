@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { ThemeContext } from './App';
 import Logout from './Logout';
-
+import { NavLink } from 'react-router-dom';
 
 function Navbar({currentUser, setCurrentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
@@ -41,13 +41,19 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                  >
 
                     <ul>
-                        <li><a href='/' >HOME</a></li>
+                        {/* <li><a href='/' >HOME</a></li> */}
+                        <li><a><NavLink to='/' >HOME</NavLink></a></li>
+                        {/* <li><a href='/about' >ABOUT</a></li> */}
+                        <li><a><NavLink to='/about' >ABOUT</NavLink></a></li>
+                        <li><a> <NavLink to='/book' >LODGING</NavLink></a></li>
+                        <li><a><NavLink to='/newreview' >NEW REVIEW</NavLink></a></li>
+                        <li><a><NavLink to='/contact' >CONTACT </NavLink></a></li>
+                        {/* <li><a href='/book' >LODGING</a></li> */}
                        
-                        <li><a href='/about' >ABOUT</a></li>
-                       
-                        <li><a href='/book' >LODGING</a></li>
-                        <li><a href='/newreview' >NEW REVIEW</a></li>
-                        <li><a href='/contact' >CONTACT</a></li>
+                        {/* <li><a href='/newreview' >NEW REVIEW</a></li> */}
+                        
+                        {/* <li><a href='/contact' >CONTACT</a></li> */}
+                        
                    </ul> 
                  </div>  
                 <div className='login-darkmode'>
