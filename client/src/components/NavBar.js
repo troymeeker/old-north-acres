@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import { ThemeContext } from './App';
 import Logout from './Logout';
 import { NavLink } from 'react-router-dom';
-import mail from '../images/mail.png';
+// import mail from '../images/mail.png';
 
 function Navbar({currentUser, setCurrentUser, toggleTheme}){
     const darkTheme = useContext(ThemeContext)
@@ -55,9 +55,9 @@ function Navbar({currentUser, setCurrentUser, toggleTheme}){
                         <li><a><NavLink to='/contact' >CONTACT </NavLink></a></li>
                         {/* <li><a><NavLink to='/' >test </NavLink></a></li> */}
 
-                         <div className="footer-img" id="mail-img">
+                         {/* <div className="footer-img" id="mail-img">
                              <NavLink to='/contact' ><img src={mail} alt="mail-logo" /></NavLink>
-                         </div>
+                         </div> */}
                         
                    </ul> 
                  </div>  

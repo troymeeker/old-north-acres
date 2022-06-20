@@ -124,7 +124,7 @@
  
 }
 
-  @media (max-width: 990px) {
+  @media (max-width: 1070px) {
       /* meaning when media is <900px */
       .navbar{
         flex-direction: column;
